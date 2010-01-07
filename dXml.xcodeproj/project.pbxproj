@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		650176C110EDCDA100E5CBB1 /* UrlConnectionException.h in Headers */ = {isa = PBXBuildFile; fileRef = 650176BF10EDCDA100E5CBB1 /* UrlConnectionException.h */; };
+		650176C210EDCDA100E5CBB1 /* UrlConnectionException.m in Sources */ = {isa = PBXBuildFile; fileRef = 650176C010EDCDA100E5CBB1 /* UrlConnectionException.m */; };
+		650176C310EDCDA100E5CBB1 /* UrlConnectionException.m in Sources */ = {isa = PBXBuildFile; fileRef = 650176C010EDCDA100E5CBB1 /* UrlConnectionException.m */; };
+		650E72B610AADB7500CE8A8E /* XmlParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 650E72B510AADB7500CE8A8E /* XmlParserTests.m */; };
+		65160784109A86E7002BE0D0 /* XmlException.h in Headers */ = {isa = PBXBuildFile; fileRef = 65160781109A86E7002BE0D0 /* XmlException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65160785109A86E7002BE0D0 /* XmlException.m in Sources */ = {isa = PBXBuildFile; fileRef = 65160782109A86E7002BE0D0 /* XmlException.m */; };
+		65160801109A9D17002BE0D0 /* XmlAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 651607FE109A9D17002BE0D0 /* XmlAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65160802109A9D17002BE0D0 /* XmlAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 651607FF109A9D17002BE0D0 /* XmlAttribute.m */; };
+		6516081A109AA0FF002BE0D0 /* XmlAttributeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65160817109AA0FF002BE0D0 /* XmlAttributeTests.m */; };
+		65160995109B0C8A002BE0D0 /* XmlDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 65160992109B0C8A002BE0D0 /* XmlDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65160996109B0C8A002BE0D0 /* XmlDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 65160993109B0C8A002BE0D0 /* XmlDocument.m */; };
+		65216CFF10C63E1100F2B998 /* WebServiceFaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65216CFE10C63E1100F2B998 /* WebServiceFaultTests.m */; };
+		65216D2710C640C700F2B998 /* WebServiceFault.h in Headers */ = {isa = PBXBuildFile; fileRef = 6524940D10C39C2900CEE11D /* WebServiceFault.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65216D2810C640C700F2B998 /* WebServiceFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 6524940E10C39C2900CEE11D /* WebServiceFault.m */; };
+		65320BAF10BCF0230056BDDF /* XmlDocumentParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 65320BAD10BCF0230056BDDF /* XmlDocumentParserDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65320BB010BCF0230056BDDF /* XmlDocumentParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65320BAE10BCF0230056BDDF /* XmlDocumentParserDelegate.m */; };
+		6532522810BE4DFE00007475 /* SoapWebserviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6532522710BE4DFE00007475 /* SoapWebserviceTests.m */; };
+		655E114C10CCC52200D8E6D1 /* UrlConnectionIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E114610CCC4A400D8E6D1 /* UrlConnectionIntegrationTests.m */; };
+		655E114D10CCC52B00D8E6D1 /* UrlConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E110010CCAFCC00D8E6D1 /* UrlConnectionTests.m */; };
+		655E114E10CCC54600D8E6D1 /* SoapWebserviceIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E111710CCC1E500D8E6D1 /* SoapWebserviceIntegrationTests.m */; };
+		655E114F10CCC55A00D8E6D1 /* UseridPasswordSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F6E810C8B69E009DB40E /* UseridPasswordSecurity.m */; };
+		655E115010CCC55A00D8E6D1 /* UseridPasswordSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C4F6E710C8B69E009DB40E /* UseridPasswordSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		655E147510CE06C500D8E6D1 /* UrlConnection+NSURLConnectionDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E147410CE06C500D8E6D1 /* UrlConnection+NSURLConnectionDelegateTests.m */; };
+		655E14E010CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E14DB10CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m */; };
+		655E153910CE0DE100D8E6D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E14F710CE0D7F00D8E6D1 /* UIKit.framework */; };
+		655E153A10CE0DEF00D8E6D1 /* libGHUnitIPhone3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E14DD10CE0B8000D8E6D1 /* libGHUnitIPhone3_0.a */; };
+		6568477B10D669080031C348 /* TextNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568477910D669080031C348 /* TextNodeTests.m */; };
+		6568478D10D66A6D0031C348 /* XmlNamespaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568478B10D66A6D0031C348 /* XmlNamespaceTests.m */; };
+		6568497210D73EA60031C348 /* WebServiceException.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB813210CBC76400959C05 /* WebServiceException.m */; };
+		6568497310D73EA60031C348 /* UrlConnection+NSURLConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E11D910CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.m */; };
+		6568497410D73EA70031C348 /* XmlException.m in Sources */ = {isa = PBXBuildFile; fileRef = 65160782109A86E7002BE0D0 /* XmlException.m */; };
+		6568497510D73EA70031C348 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F82D10C8DEC1009DB40E /* Security.m */; };
+		6568497610D73EA80031C348 /* DMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F07E4F10D5E7AE0057AD6C /* DMNode.m */; };
+		6568497710D73EA90031C348 /* TextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D1D10D515F500AF89C0 /* TextNode.m */; };
+		6568497810D73EA90031C348 /* XmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4613910941768008AF68E /* XmlParser.m */; };
+		6568497910D73EAA0031C348 /* WebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC480F10BE2EA90094492E /* WebServiceResponse.m */; };
+		6568497A10D73EAA0031C348 /* UrlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB81AA10CC82D900959C05 /* UrlConnection.m */; };
+		6568497B10D73EAB0031C348 /* XmlNamespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7480F10BB9B330030ABA4 /* XmlNamespace.m */; };
+		6568497C10D73EAD0031C348 /* UseridPasswordSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F6E810C8B69E009DB40E /* UseridPasswordSecurity.m */; };
+		6568497D10D73EAD0031C348 /* NSObject+SoapTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F72110C8BA5F009DB40E /* NSObject+SoapTemplates.m */; };
+		6568497E10D73EAE0031C348 /* XmlDocumentParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65320BAE10BCF0230056BDDF /* XmlDocumentParserDelegate.m */; };
+		6568497F10D73EAE0031C348 /* XmlAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 651607FF109A9D17002BE0D0 /* XmlAttribute.m */; };
+		6568498010D73EAF0031C348 /* XmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D3110D51A8D00AF89C0 /* XmlNode.m */; };
+		6568498110D73EB00031C348 /* NoSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F68310C8A1DE009DB40E /* NoSecurity.m */; };
+		6568498210D73EB10031C348 /* WebServiceFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 6524940E10C39C2900CEE11D /* WebServiceFault.m */; };
+		6568498310D73EB20031C348 /* SoapWebServiceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC480A10BE2C790094492E /* SoapWebServiceConnection.m */; };
+		6568498410D73EB30031C348 /* XmlDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 65160993109B0C8A002BE0D0 /* XmlDocument.m */; };
+		6568498510D73EB40031C348 /* XmlSubtreeParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DAB53510B179CE00207E87 /* XmlSubtreeParserDelegate.m */; };
+		65894D1E10D515F500AF89C0 /* TextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 65894D1C10D515F500AF89C0 /* TextNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65894D1F10D515F500AF89C0 /* TextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D1D10D515F500AF89C0 /* TextNode.m */; };
+		65894D3210D51A8D00AF89C0 /* XmlNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 65894D3010D51A8D00AF89C0 /* XmlNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65894D3310D51A8D00AF89C0 /* XmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D3110D51A8D00AF89C0 /* XmlNode.m */; };
+		65B947DB10CE214E00F7B4D4 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B947DA10CE214E00F7B4D4 /* OCMock.framework */; };
+		65B947DE10CE215A00F7B4D4 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65B947DA10CE214E00F7B4D4 /* OCMock.framework */; };
+		65BB813410CBC76400959C05 /* WebServiceException.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BB813110CBC76400959C05 /* WebServiceException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65BB813510CBC76400959C05 /* WebServiceException.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB813210CBC76400959C05 /* WebServiceException.m */; };
+		65BB81AC10CC82D900959C05 /* UrlConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BB81A910CC82D900959C05 /* UrlConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65BB81AD10CC82D900959C05 /* UrlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BB81AA10CC82D900959C05 /* UrlConnection.m */; };
+		65C4F66110C8923D009DB40E /* Security.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C4F65F10C8923D009DB40E /* Security.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C4F68410C8A1DE009DB40E /* NoSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C4F68210C8A1DE009DB40E /* NoSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C4F68510C8A1DE009DB40E /* NoSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F68310C8A1DE009DB40E /* NoSecurity.m */; };
+		65C4F6B510C8B3DB009DB40E /* SecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F6B410C8B3DB009DB40E /* SecurityTests.m */; };
+		65C4F71410C8B856009DB40E /* UseridPasswordSecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F71310C8B856009DB40E /* UseridPasswordSecurityTests.m */; };
+		65C4F72310C8BA5F009DB40E /* NSObject+SoapTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C4F72010C8BA5F009DB40E /* NSObject+SoapTemplates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C4F72410C8BA5F009DB40E /* NSObject+SoapTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F72110C8BA5F009DB40E /* NSObject+SoapTemplates.m */; };
+		65C4F82E10C8DEC1009DB40E /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F82D10C8DEC1009DB40E /* Security.m */; };
+		65D0923010B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D0922D10B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m */; };
+		65D0951610BA435A0061CC61 /* dXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D0951510BA435A0061CC61 /* dXml.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65D4AACA10D21FCA003E356D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E647EC10955FCA0055AA46 /* CoreGraphics.framework */; };
+		65D4AB1810D21FD4003E356D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		65D4ABD210D512C0003E356D /* DMNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D4ABD110D512C0003E356D /* DMNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65DAB53710B179CE00207E87 /* XmlSubtreeParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 65DAB53410B179CE00207E87 /* XmlSubtreeParserDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65DAB53810B179CE00207E87 /* XmlSubtreeParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DAB53510B179CE00207E87 /* XmlSubtreeParserDelegate.m */; };
+		65E6488D1095B7A40055AA46 /* XmlNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F461501094190D008AF68E /* XmlNodeTests.m */; };
+		65F07E2C10D5E6E30057AD6C /* UrlConnection+NSURLConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 655E11D810CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65F07E2D10D5E6E30057AD6C /* UrlConnection+NSURLConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E11D910CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.m */; };
+		65F07E5010D5E7AE0057AD6C /* DMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F07E4F10D5E7AE0057AD6C /* DMNode.m */; };
+		65F4613810941762008AF68E /* XmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F4613710941762008AF68E /* XmlParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65F4613B10941768008AF68E /* XmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4613910941768008AF68E /* XmlParser.m */; };
+		65F7481010BB9B330030ABA4 /* XmlNamespace.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F7480E10BB9B330030ABA4 /* XmlNamespace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65F7481110BB9B330030ABA4 /* XmlNamespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7480F10BB9B330030ABA4 /* XmlNamespace.m */; };
+		65FC46D810BDF68E0094492E /* XmlSubtreeParserDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC46D610BDF68E0094492E /* XmlSubtreeParserDelegateTests.m */; };
+		65FC480B10BE2C790094492E /* SoapWebServiceConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 65FC480910BE2C790094492E /* SoapWebServiceConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65FC480C10BE2C790094492E /* SoapWebServiceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC480A10BE2C790094492E /* SoapWebServiceConnection.m */; };
+		65FC481010BE2EA90094492E /* WebServiceResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 65FC480E10BE2EA90094492E /* WebServiceResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65FC481110BE2EA90094492E /* WebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC480F10BE2EA90094492E /* WebServiceResponse.m */; };
+		65FC482110BE30850094492E /* WebServiceResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC482010BE30850094492E /* WebServiceResponseTests.m */; };
+		AA747D9F0F9514B9006C5449 /* dXml_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* dXml_Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		656847D310D701F80031C348 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65E646E910955DD70055AA46;
+			remoteInfo = "dXml Tests";
+		};
+		65E646F010955DFF0055AA46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = dXml;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6506F85E10CE13260095E6D7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				65B947DE10CE215A00F7B4D4 /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		650176BF10EDCDA100E5CBB1 /* UrlConnectionException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlConnectionException.h; sourceTree = "<group>"; };
+		650176C010EDCDA100E5CBB1 /* UrlConnectionException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlConnectionException.m; sourceTree = "<group>"; };
+		6506F78010CE0E610095E6D7 /* GHUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHUnit.h; path = "../../tools/libGHUnitIPhone3_0-0/GHUnit.h"; sourceTree = SOURCE_ROOT; };
+		650E72B510AADB7500CE8A8E /* XmlParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlParserTests.m; sourceTree = "<group>"; };
+		65160781109A86E7002BE0D0 /* XmlException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlException.h; sourceTree = "<group>"; };
+		65160782109A86E7002BE0D0 /* XmlException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlException.m; sourceTree = "<group>"; };
+		651607FE109A9D17002BE0D0 /* XmlAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAttribute.h; sourceTree = "<group>"; };
+		651607FF109A9D17002BE0D0 /* XmlAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAttribute.m; sourceTree = "<group>"; };
+		65160817109AA0FF002BE0D0 /* XmlAttributeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAttributeTests.m; sourceTree = "<group>"; };
+		65160992109B0C8A002BE0D0 /* XmlDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlDocument.h; sourceTree = "<group>"; };
+		65160993109B0C8A002BE0D0 /* XmlDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlDocument.m; sourceTree = "<group>"; };
+		65216CFE10C63E1100F2B998 /* WebServiceFaultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFaultTests.m; sourceTree = "<group>"; };
+		6524940D10C39C2900CEE11D /* WebServiceFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceFault.h; sourceTree = "<group>"; };
+		6524940E10C39C2900CEE11D /* WebServiceFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFault.m; sourceTree = "<group>"; };
+		65320BAD10BCF0230056BDDF /* XmlDocumentParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlDocumentParserDelegate.h; sourceTree = "<group>"; };
+		65320BAE10BCF0230056BDDF /* XmlDocumentParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlDocumentParserDelegate.m; sourceTree = "<group>"; };
+		6532522710BE4DFE00007475 /* SoapWebserviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapWebserviceTests.m; sourceTree = "<group>"; };
+		655E110010CCAFCC00D8E6D1 /* UrlConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlConnectionTests.m; sourceTree = "<group>"; };
+		655E111710CCC1E500D8E6D1 /* SoapWebserviceIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapWebserviceIntegrationTests.m; sourceTree = "<group>"; };
+		655E114610CCC4A400D8E6D1 /* UrlConnectionIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlConnectionIntegrationTests.m; sourceTree = "<group>"; };
+		655E114B10CCC51900D8E6D1 /* IntegrationTestDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestDefaults.h; sourceTree = "<group>"; };
+		655E11D810CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UrlConnection+NSURLConnectionDelegate.h"; sourceTree = "<group>"; };
+		655E11D910CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UrlConnection+NSURLConnectionDelegate.m"; sourceTree = "<group>"; };
+		655E147410CE06C500D8E6D1 /* UrlConnection+NSURLConnectionDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UrlConnection+NSURLConnectionDelegateTests.m"; sourceTree = "<group>"; };
+		655E14D210CE0B8000D8E6D1 /* GHAsyncTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHAsyncTestCase.h; path = "../../tools/libGHUnitIPhone3_0-0/GHAsyncTestCase.h"; sourceTree = SOURCE_ROOT; };
+		655E14D310CE0B8000D8E6D1 /* GHTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTest.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTest.h"; sourceTree = SOURCE_ROOT; };
+		655E14D410CE0B8000D8E6D1 /* GHTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTestCase.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTestCase.h"; sourceTree = SOURCE_ROOT; };
+		655E14D510CE0B8000D8E6D1 /* GHTestGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTestGroup.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTestGroup.h"; sourceTree = SOURCE_ROOT; };
+		655E14D610CE0B8000D8E6D1 /* GHTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTesting.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTesting.h"; sourceTree = SOURCE_ROOT; };
+		655E14D710CE0B8000D8E6D1 /* GHTestMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTestMacros.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTestMacros.h"; sourceTree = SOURCE_ROOT; };
+		655E14D810CE0B8000D8E6D1 /* GHTestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTestRunner.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTestRunner.h"; sourceTree = SOURCE_ROOT; };
+		655E14D910CE0B8000D8E6D1 /* GHTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHTestSuite.h; path = "../../tools/libGHUnitIPhone3_0-0/GHTestSuite.h"; sourceTree = SOURCE_ROOT; };
+		655E14DA10CE0B8000D8E6D1 /* GHUnitIPhoneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHUnitIPhoneAppDelegate.h; path = "../../tools/libGHUnitIPhone3_0-0/GHUnitIPhoneAppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		655E14DB10CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitIPhoneTestMain.m; path = "../../tools/libGHUnitIPhone3_0-0/GHUnitIPhoneTestMain.m"; sourceTree = SOURCE_ROOT; };
+		655E14DC10CE0B8000D8E6D1 /* GHUNSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GHUNSObject+Swizzle.h"; path = "../../tools/libGHUnitIPhone3_0-0/GHUNSObject+Swizzle.h"; sourceTree = SOURCE_ROOT; };
+		655E14DD10CE0B8000D8E6D1 /* libGHUnitIPhone3_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGHUnitIPhone3_0.a; path = "../../tools/libGHUnitIPhone3_0-0/libGHUnitIPhone3_0.a"; sourceTree = SOURCE_ROOT; };
+		655E14DE10CE0B8000D8E6D1 /* NSException+GHTestFailureExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+GHTestFailureExceptions.h"; path = "../../tools/libGHUnitIPhone3_0-0/NSException+GHTestFailureExceptions.h"; sourceTree = SOURCE_ROOT; };
+		655E14DF10CE0B8000D8E6D1 /* NSValue+GHValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+GHValueFormatter.h"; path = "../../tools/libGHUnitIPhone3_0-0/NSValue+GHValueFormatter.h"; sourceTree = SOURCE_ROOT; };
+		655E14F710CE0D7F00D8E6D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6568477910D669080031C348 /* TextNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNodeTests.m; sourceTree = "<group>"; };
+		6568478B10D66A6D0031C348 /* XmlNamespaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNamespaceTests.m; sourceTree = "<group>"; };
+		65894D1C10D515F500AF89C0 /* TextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNode.h; sourceTree = "<group>"; };
+		65894D1D10D515F500AF89C0 /* TextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNode.m; sourceTree = "<group>"; };
+		65894D3010D51A8D00AF89C0 /* XmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlNode.h; sourceTree = "<group>"; };
+		65894D3110D51A8D00AF89C0 /* XmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNode.m; sourceTree = "<group>"; };
+		65B947DA10CE214E00F7B4D4 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/derek/tools/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
+		65BB813110CBC76400959C05 /* WebServiceException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceException.h; sourceTree = "<group>"; };
+		65BB813210CBC76400959C05 /* WebServiceException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceException.m; sourceTree = "<group>"; };
+		65BB81A910CC82D900959C05 /* UrlConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlConnection.h; sourceTree = "<group>"; };
+		65BB81AA10CC82D900959C05 /* UrlConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlConnection.m; sourceTree = "<group>"; };
+		65C4F65F10C8923D009DB40E /* Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Security.h; sourceTree = "<group>"; };
+		65C4F68210C8A1DE009DB40E /* NoSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoSecurity.h; sourceTree = "<group>"; };
+		65C4F68310C8A1DE009DB40E /* NoSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoSecurity.m; sourceTree = "<group>"; };
+		65C4F6B410C8B3DB009DB40E /* SecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
+		65C4F6E710C8B69E009DB40E /* UseridPasswordSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseridPasswordSecurity.h; sourceTree = "<group>"; };
+		65C4F6E810C8B69E009DB40E /* UseridPasswordSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseridPasswordSecurity.m; sourceTree = "<group>"; };
+		65C4F71310C8B856009DB40E /* UseridPasswordSecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseridPasswordSecurityTests.m; sourceTree = "<group>"; };
+		65C4F72010C8BA5F009DB40E /* NSObject+SoapTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SoapTemplates.h"; sourceTree = "<group>"; };
+		65C4F72110C8BA5F009DB40E /* NSObject+SoapTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SoapTemplates.m"; sourceTree = "<group>"; };
+		65C4F82D10C8DEC1009DB40E /* Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Security.m; sourceTree = "<group>"; };
+		65D0922D10B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlDocumentParserDelegateTests.m; sourceTree = "<group>"; };
+		65D0951510BA435A0061CC61 /* dXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dXml.h; sourceTree = "<group>"; };
+		65D4AA4510D20FA7003E356D /* docset.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = docset.plist; sourceTree = "<group>"; };
+		65D4ABD110D512C0003E356D /* DMNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNode.h; sourceTree = "<group>"; };
+		65DAB53410B179CE00207E87 /* XmlSubtreeParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlSubtreeParserDelegate.h; sourceTree = "<group>"; };
+		65DAB53510B179CE00207E87 /* XmlSubtreeParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlSubtreeParserDelegate.m; sourceTree = "<group>"; };
+		65E646EA10955DD70055AA46 /* dXml Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dXml Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E646EC10955DD70055AA46 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		65E647EC10955FCA0055AA46 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		65F07E4F10D5E7AE0057AD6C /* DMNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNode.m; sourceTree = "<group>"; };
+		65F4613710941762008AF68E /* XmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlParser.h; sourceTree = "<group>"; };
+		65F4613910941768008AF68E /* XmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlParser.m; sourceTree = "<group>"; };
+		65F461501094190D008AF68E /* XmlNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNodeTests.m; sourceTree = "<group>"; };
+		65F7480E10BB9B330030ABA4 /* XmlNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlNamespace.h; sourceTree = "<group>"; };
+		65F7480F10BB9B330030ABA4 /* XmlNamespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNamespace.m; sourceTree = "<group>"; };
+		65FC46D610BDF68E0094492E /* XmlSubtreeParserDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlSubtreeParserDelegateTests.m; sourceTree = "<group>"; };
+		65FC480910BE2C790094492E /* SoapWebServiceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapWebServiceConnection.h; sourceTree = "<group>"; };
+		65FC480A10BE2C790094492E /* SoapWebServiceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapWebServiceConnection.m; sourceTree = "<group>"; };
+		65FC480E10BE2EA90094492E /* WebServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceResponse.h; sourceTree = "<group>"; };
+		65FC480F10BE2EA90094492E /* WebServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceResponse.m; sourceTree = "<group>"; };
+		65FC482010BE30850094492E /* WebServiceResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceResponseTests.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* dXml_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dXml_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* lib_dXml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = lib_dXml.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E646E810955DD70055AA46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655E153910CE0DE100D8E6D1 /* UIKit.framework in Frameworks */,
+				655E153A10CE0DEF00D8E6D1 /* libGHUnitIPhone3_0.a in Frameworks */,
+				65B947DB10CE214E00F7B4D4 /* OCMock.framework in Frameworks */,
+				65D4AACA10D21FCA003E356D /* CoreGraphics.framework in Frameworks */,
+				65D4AB1810D21FD4003E356D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* lib_dXml.a */,
+				65E646EA10955DD70055AA46 /* dXml Tests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* dXml */ = {
+			isa = PBXGroup;
+			children = (
+				65F460C810941073008AF68E /* tests */,
+				08FB77AEFE84172EC02AAC07 /* code */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				65E646EC10955DD70055AA46 /* Tests-Info.plist */,
+			);
+			name = dXml;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E647EC10955FCA0055AA46 /* CoreGraphics.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				65B947DA10CE214E00F7B4D4 /* OCMock.framework */,
+				655E14F710CE0D7F00D8E6D1 /* UIKit.framework */,
+				655E14D110CE0B4100D8E6D1 /* Unit Testing Framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				65D0922510B913440061CC61 /* impl */,
+				65FC480910BE2C790094492E /* SoapWebServiceConnection.h */,
+				65FC480A10BE2C790094492E /* SoapWebServiceConnection.m */,
+				65F4613710941762008AF68E /* XmlParser.h */,
+				65F4613910941768008AF68E /* XmlParser.m */,
+			);
+			name = code;
+			path = src/code;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				65D4AA4510D20FA7003E356D /* docset.plist */,
+				AA747D9E0F9514B9006C5449 /* dXml_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		65320BB310BCF0FD0056BDDF /* Document Model */ = {
+			isa = PBXGroup;
+			children = (
+				65160817109AA0FF002BE0D0 /* XmlAttributeTests.m */,
+				65F461501094190D008AF68E /* XmlNodeTests.m */,
+				6568477910D669080031C348 /* TextNodeTests.m */,
+				6568478B10D66A6D0031C348 /* XmlNamespaceTests.m */,
+			);
+			name = "Document Model";
+			sourceTree = "<group>";
+		};
+		655E14D110CE0B4100D8E6D1 /* Unit Testing Framework */ = {
+			isa = PBXGroup;
+			children = (
+				6506F78010CE0E610095E6D7 /* GHUnit.h */,
+				655E14D210CE0B8000D8E6D1 /* GHAsyncTestCase.h */,
+				655E14D310CE0B8000D8E6D1 /* GHTest.h */,
+				655E14D410CE0B8000D8E6D1 /* GHTestCase.h */,
+				655E14D510CE0B8000D8E6D1 /* GHTestGroup.h */,
+				655E14D610CE0B8000D8E6D1 /* GHTesting.h */,
+				655E14D710CE0B8000D8E6D1 /* GHTestMacros.h */,
+				655E14D810CE0B8000D8E6D1 /* GHTestRunner.h */,
+				655E14D910CE0B8000D8E6D1 /* GHTestSuite.h */,
+				655E14DA10CE0B8000D8E6D1 /* GHUnitIPhoneAppDelegate.h */,
+				655E14DB10CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m */,
+				655E14DC10CE0B8000D8E6D1 /* GHUNSObject+Swizzle.h */,
+				655E14DD10CE0B8000D8E6D1 /* libGHUnitIPhone3_0.a */,
+				655E14DE10CE0B8000D8E6D1 /* NSException+GHTestFailureExceptions.h */,
+				655E14DF10CE0B8000D8E6D1 /* NSValue+GHValueFormatter.h */,
+			);
+			name = "Unit Testing Framework";
+			sourceTree = "<group>";
+		};
+		65C4F65C10C891C9009DB40E /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				65C4F68210C8A1DE009DB40E /* NoSecurity.h */,
+				65C4F68310C8A1DE009DB40E /* NoSecurity.m */,
+				65C4F65F10C8923D009DB40E /* Security.h */,
+				65C4F82D10C8DEC1009DB40E /* Security.m */,
+				65C4F6E710C8B69E009DB40E /* UseridPasswordSecurity.h */,
+				65C4F6E810C8B69E009DB40E /* UseridPasswordSecurity.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		65C4F6B110C8B3B9009DB40E /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				65C4F6B410C8B3DB009DB40E /* SecurityTests.m */,
+				65C4F71310C8B856009DB40E /* UseridPasswordSecurityTests.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		65D0922510B913440061CC61 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				65D4ABCE10D5126F003E356D /* Document Model */,
+				65D0951510BA435A0061CC61 /* dXml.h */,
+				65C4F72010C8BA5F009DB40E /* NSObject+SoapTemplates.h */,
+				65C4F72110C8BA5F009DB40E /* NSObject+SoapTemplates.m */,
+				65C4F65C10C891C9009DB40E /* Security */,
+				655E11D810CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.h */,
+				655E11D910CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.m */,
+				65BB81A910CC82D900959C05 /* UrlConnection.h */,
+				65BB81AA10CC82D900959C05 /* UrlConnection.m */,
+				650176BF10EDCDA100E5CBB1 /* UrlConnectionException.h */,
+				650176C010EDCDA100E5CBB1 /* UrlConnectionException.m */,
+				65BB813110CBC76400959C05 /* WebServiceException.h */,
+				65BB813210CBC76400959C05 /* WebServiceException.m */,
+				6524940D10C39C2900CEE11D /* WebServiceFault.h */,
+				6524940E10C39C2900CEE11D /* WebServiceFault.m */,
+				65FC480E10BE2EA90094492E /* WebServiceResponse.h */,
+				65FC480F10BE2EA90094492E /* WebServiceResponse.m */,
+				65320BAD10BCF0230056BDDF /* XmlDocumentParserDelegate.h */,
+				65320BAE10BCF0230056BDDF /* XmlDocumentParserDelegate.m */,
+				65160781109A86E7002BE0D0 /* XmlException.h */,
+				65160782109A86E7002BE0D0 /* XmlException.m */,
+				65DAB53410B179CE00207E87 /* XmlSubtreeParserDelegate.h */,
+				65DAB53510B179CE00207E87 /* XmlSubtreeParserDelegate.m */,
+			);
+			includeInIndex = 1;
+			name = impl;
+			sourceTree = "<group>";
+			wrapsLines = 1;
+		};
+		65D0922A10B92B180061CC61 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				65320BB310BCF0FD0056BDDF /* Document Model */,
+				65C4F6B110C8B3B9009DB40E /* Security */,
+				655E147410CE06C500D8E6D1 /* UrlConnection+NSURLConnectionDelegateTests.m */,
+				655E114610CCC4A400D8E6D1 /* UrlConnectionIntegrationTests.m */,
+				655E110010CCAFCC00D8E6D1 /* UrlConnectionTests.m */,
+				65216CFE10C63E1100F2B998 /* WebServiceFaultTests.m */,
+				65FC482010BE30850094492E /* WebServiceResponseTests.m */,
+				65D0922D10B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m */,
+				65FC46D610BDF68E0094492E /* XmlSubtreeParserDelegateTests.m */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
+		65D4ABCE10D5126F003E356D /* Document Model */ = {
+			isa = PBXGroup;
+			children = (
+				65D4ABD110D512C0003E356D /* DMNode.h */,
+				65F07E4F10D5E7AE0057AD6C /* DMNode.m */,
+				65894D1C10D515F500AF89C0 /* TextNode.h */,
+				65894D1D10D515F500AF89C0 /* TextNode.m */,
+				651607FE109A9D17002BE0D0 /* XmlAttribute.h */,
+				651607FF109A9D17002BE0D0 /* XmlAttribute.m */,
+				65160992109B0C8A002BE0D0 /* XmlDocument.h */,
+				65160993109B0C8A002BE0D0 /* XmlDocument.m */,
+				65F7480E10BB9B330030ABA4 /* XmlNamespace.h */,
+				65F7480F10BB9B330030ABA4 /* XmlNamespace.m */,
+				65894D3010D51A8D00AF89C0 /* XmlNode.h */,
+				65894D3110D51A8D00AF89C0 /* XmlNode.m */,
+			);
+			name = "Document Model";
+			sourceTree = "<group>";
+		};
+		65F460C810941073008AF68E /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				65D0922A10B92B180061CC61 /* impl */,
+				655E114B10CCC51900D8E6D1 /* IntegrationTestDefaults.h */,
+				655E111710CCC1E500D8E6D1 /* SoapWebserviceIntegrationTests.m */,
+				6532522710BE4DFE00007475 /* SoapWebserviceTests.m */,
+				650E72B510AADB7500CE8A8E /* XmlParserTests.m */,
+			);
+			name = tests;
+			path = src/tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* dXml_Prefix.pch in Headers */,
+				65F4613810941762008AF68E /* XmlParser.h in Headers */,
+				65160784109A86E7002BE0D0 /* XmlException.h in Headers */,
+				65160801109A9D17002BE0D0 /* XmlAttribute.h in Headers */,
+				65160995109B0C8A002BE0D0 /* XmlDocument.h in Headers */,
+				65DAB53710B179CE00207E87 /* XmlSubtreeParserDelegate.h in Headers */,
+				65D0951610BA435A0061CC61 /* dXml.h in Headers */,
+				65F7481010BB9B330030ABA4 /* XmlNamespace.h in Headers */,
+				65320BAF10BCF0230056BDDF /* XmlDocumentParserDelegate.h in Headers */,
+				65FC480B10BE2C790094492E /* SoapWebServiceConnection.h in Headers */,
+				65FC481010BE2EA90094492E /* WebServiceResponse.h in Headers */,
+				65216D2710C640C700F2B998 /* WebServiceFault.h in Headers */,
+				65C4F66110C8923D009DB40E /* Security.h in Headers */,
+				65C4F68410C8A1DE009DB40E /* NoSecurity.h in Headers */,
+				65C4F72310C8BA5F009DB40E /* NSObject+SoapTemplates.h in Headers */,
+				65BB813410CBC76400959C05 /* WebServiceException.h in Headers */,
+				65BB81AC10CC82D900959C05 /* UrlConnection.h in Headers */,
+				655E115010CCC55A00D8E6D1 /* UseridPasswordSecurity.h in Headers */,
+				65D4ABD210D512C0003E356D /* DMNode.h in Headers */,
+				65894D1E10D515F500AF89C0 /* TextNode.h in Headers */,
+				65894D3210D51A8D00AF89C0 /* XmlNode.h in Headers */,
+				65F07E2C10D5E6E30057AD6C /* UrlConnection+NSURLConnectionDelegate.h in Headers */,
+				650176C110EDCDA100E5CBB1 /* UrlConnectionException.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		656847BE10D7000B0031C348 /* Documentation */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = " -p dXml -i src/code/ -o docs -t ../../.appledoc -d ../../tools/Doxygen.app/Contents/Resources/doxygen -c doxygen-appledoc.config --clean-before-build --xhtml-bordered-issues --docset --docplist docset.plist";
+			buildConfigurationList = 656847C110D700290031C348 /* Build configuration list for PBXLegacyTarget "Documentation" */;
+			buildPhases = (
+			);
+			buildToolPath = ../../tools/appledoc/appledoc;
+			buildWorkingDirectory = /Users/derek/projects/dXml;
+			dependencies = (
+				656847D410D701F80031C348 /* PBXTargetDependency */,
+			);
+			name = Documentation;
+			passBuildSettingsInEnvironment = 1;
+			productName = Documentation;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		65E646E910955DD70055AA46 /* dXml Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E646EF10955DD80055AA46 /* Build configuration list for PBXNativeTarget "dXml Tests" */;
+			buildPhases = (
+				65E646E710955DD70055AA46 /* Sources */,
+				6506F85E10CE13260095E6D7 /* CopyFiles */,
+				65E646E810955DD70055AA46 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65E646F110955DFF0055AA46 /* PBXTargetDependency */,
+			);
+			name = "dXml Tests";
+			productName = Tests;
+			productReference = 65E646EA10955DD70055AA46 /* dXml Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2AAC07D0554694100DB518D /* dXml */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "dXml" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dXml;
+			productName = dXml;
+			productReference = D2AAC07E0554694100DB518D /* lib_dXml.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "dXml" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* dXml */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* dXml */,
+				65E646E910955DD70055AA46 /* dXml Tests */,
+				656847BE10D7000B0031C348 /* Documentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65E646E710955DD70055AA46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E6488D1095B7A40055AA46 /* XmlNodeTests.m in Sources */,
+				6516081A109AA0FF002BE0D0 /* XmlAttributeTests.m in Sources */,
+				650E72B610AADB7500CE8A8E /* XmlParserTests.m in Sources */,
+				65D0923010B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m in Sources */,
+				65FC46D810BDF68E0094492E /* XmlSubtreeParserDelegateTests.m in Sources */,
+				65FC482110BE30850094492E /* WebServiceResponseTests.m in Sources */,
+				6532522810BE4DFE00007475 /* SoapWebserviceTests.m in Sources */,
+				65216CFF10C63E1100F2B998 /* WebServiceFaultTests.m in Sources */,
+				65C4F6B510C8B3DB009DB40E /* SecurityTests.m in Sources */,
+				65C4F71410C8B856009DB40E /* UseridPasswordSecurityTests.m in Sources */,
+				655E114C10CCC52200D8E6D1 /* UrlConnectionIntegrationTests.m in Sources */,
+				655E114D10CCC52B00D8E6D1 /* UrlConnectionTests.m in Sources */,
+				655E114E10CCC54600D8E6D1 /* SoapWebserviceIntegrationTests.m in Sources */,
+				655E147510CE06C500D8E6D1 /* UrlConnection+NSURLConnectionDelegateTests.m in Sources */,
+				655E14E010CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m in Sources */,
+				6568477B10D669080031C348 /* TextNodeTests.m in Sources */,
+				6568478D10D66A6D0031C348 /* XmlNamespaceTests.m in Sources */,
+				6568497210D73EA60031C348 /* WebServiceException.m in Sources */,
+				6568497310D73EA60031C348 /* UrlConnection+NSURLConnectionDelegate.m in Sources */,
+				6568497410D73EA70031C348 /* XmlException.m in Sources */,
+				6568497510D73EA70031C348 /* Security.m in Sources */,
+				6568497610D73EA80031C348 /* DMNode.m in Sources */,
+				6568497710D73EA90031C348 /* TextNode.m in Sources */,
+				6568497810D73EA90031C348 /* XmlParser.m in Sources */,
+				6568497910D73EAA0031C348 /* WebServiceResponse.m in Sources */,
+				6568497A10D73EAA0031C348 /* UrlConnection.m in Sources */,
+				6568497B10D73EAB0031C348 /* XmlNamespace.m in Sources */,
+				6568497C10D73EAD0031C348 /* UseridPasswordSecurity.m in Sources */,
+				6568497D10D73EAD0031C348 /* NSObject+SoapTemplates.m in Sources */,
+				6568497E10D73EAE0031C348 /* XmlDocumentParserDelegate.m in Sources */,
+				6568497F10D73EAE0031C348 /* XmlAttribute.m in Sources */,
+				6568498010D73EAF0031C348 /* XmlNode.m in Sources */,
+				6568498110D73EB00031C348 /* NoSecurity.m in Sources */,
+				6568498210D73EB10031C348 /* WebServiceFault.m in Sources */,
+				6568498310D73EB20031C348 /* SoapWebServiceConnection.m in Sources */,
+				6568498410D73EB30031C348 /* XmlDocument.m in Sources */,
+				6568498510D73EB40031C348 /* XmlSubtreeParserDelegate.m in Sources */,
+				650176C310EDCDA100E5CBB1 /* UrlConnectionException.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65F4613B10941768008AF68E /* XmlParser.m in Sources */,
+				65160785109A86E7002BE0D0 /* XmlException.m in Sources */,
+				65160802109A9D17002BE0D0 /* XmlAttribute.m in Sources */,
+				65160996109B0C8A002BE0D0 /* XmlDocument.m in Sources */,
+				65DAB53810B179CE00207E87 /* XmlSubtreeParserDelegate.m in Sources */,
+				65F7481110BB9B330030ABA4 /* XmlNamespace.m in Sources */,
+				65320BB010BCF0230056BDDF /* XmlDocumentParserDelegate.m in Sources */,
+				65FC480C10BE2C790094492E /* SoapWebServiceConnection.m in Sources */,
+				65FC481110BE2EA90094492E /* WebServiceResponse.m in Sources */,
+				65216D2810C640C700F2B998 /* WebServiceFault.m in Sources */,
+				65C4F68510C8A1DE009DB40E /* NoSecurity.m in Sources */,
+				65C4F72410C8BA5F009DB40E /* NSObject+SoapTemplates.m in Sources */,
+				65C4F82E10C8DEC1009DB40E /* Security.m in Sources */,
+				65BB813510CBC76400959C05 /* WebServiceException.m in Sources */,
+				65BB81AD10CC82D900959C05 /* UrlConnection.m in Sources */,
+				655E114F10CCC55A00D8E6D1 /* UseridPasswordSecurity.m in Sources */,
+				65894D1F10D515F500AF89C0 /* TextNode.m in Sources */,
+				65894D3310D51A8D00AF89C0 /* XmlNode.m in Sources */,
+				65F07E2D10D5E6E30057AD6C /* UrlConnection+NSURLConnectionDelegate.m in Sources */,
+				65F07E5010D5E7AE0057AD6C /* DMNode.m in Sources */,
+				650176C210EDCDA100E5CBB1 /* UrlConnectionException.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		656847D410D701F80031C348 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65E646E910955DD70055AA46 /* dXml Tests */;
+			targetProxy = 656847D310D701F80031C348 /* PBXContainerItemProxy */;
+		};
+		65E646F110955DFF0055AA46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* dXml */;
+			targetProxy = 65E646F010955DFF0055AA46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/dXml.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = dXml_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = dXml;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/dXml.dst;
+				EXECUTABLE_PREFIX = lib_;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = dXml_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = dXml;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DHC_LOG_DEALLOCS,
+					DHC_DEBUG,
+				);
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				PUBLIC_HEADERS_FOLDER_PATH = "public headers";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphonesimulator3.1.2;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CURRENT_PROJECT_VERSION = 0.0.1;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				PUBLIC_HEADERS_FOLDER_PATH = "public headers";
+				SDKROOT = iphonesimulator3.1.2;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		656847BF10D7000B0031C348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Documentation;
+			};
+			name = Debug;
+		};
+		656847C010D7000B0031C348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Documentation;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		65E646ED10955DD80055AA46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../tools/OCMock 1.55\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../tools/libGHUnitIPhone3_0-0\"",
+					"\"$(SRCROOT)/../../tools/OCMock 1.55/OCMock.framework\"",
+					"\"$(SRCROOT)/../../tools/OCMock 1.55 Static\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "dXml Tests";
+				SDKROOT = iphonesimulator3.1.2;
+			};
+			name = Debug;
+		};
+		65E646EE10955DD80055AA46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../tools/OCMock 1.55\"",
+					"\"$(SRCROOT)/../../tools\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)/libGHUnitIPhone3_0-0\"",
+					"\"$(SRCROOT)/../../tools/libGHUnitIPhone3_0-0\"",
+					"\"$(SRCROOT)/../../tools/OCMock 1.55/OCMock.framework\"",
+					"\"$(SRCROOT)/../../tools/OCMock 1.55 Static\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "dXml Tests";
+				SDKROOT = iphonesimulator3.1.2;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "dXml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "dXml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		656847C110D700290031C348 /* Build configuration list for PBXLegacyTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				656847BF10D7000B0031C348 /* Debug */,
+				656847C010D7000B0031C348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E646EF10955DD80055AA46 /* Build configuration list for PBXNativeTarget "dXml Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E646ED10955DD80055AA46 /* Debug */,
+				65E646EE10955DD80055AA46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

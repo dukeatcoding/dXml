@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DocSetPublisherName</key>
+	<string>dSoft</string>
+	<key>DocSetPublisherIdentifier</key>
+	<string>au.com.dSoft</string>
+	<key>CFBundleIdentifier</key>
+	<string>au.com.dSoft.dXml</string>
+	<key>CFBundleName</key>
+	<string>dXml Documentation</string>
+	<key>DocSetFeedName</key>
+	<string>http://au.com.dSoft/dXml</string>
+</dict>
+</plist>
