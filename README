@@ -1,1 +1,8 @@
-dXml
+h1. dXml
+
+dXml is an api to allow iPhone programmers to have the following tools:
+
+* A DOM like api for parsing, assembling and reading xml.
+* A tool for sending and receiving xml from servers.
+* A Wrapper around SOAP based web services.
+
