@@ -32,7 +32,8 @@ Now lets look at creating a document model in code. Here's an example piece of c
 
 Very simple. here's a much more practical and sophisticated example: 
 
-	XmlDocument *document = [[[XmlDocument alloc] initWithName: @"envelope" prefix: @"soap"] autorelease];	[document addNamespace: @"http://schemas.xmlsoap.org/soap/envelope/" prefix: @"soap"];	[document setAttribute: @"soap:encodingStyle" value: @"http://schemas.xmlsoap.org/soap/encoding/"];	XmlNode *bodyElement = [document addXmlNodeWithName: @"body" prefix: @"soap"];	XmlNode *getLastTradePriceElement = [bodyElement addXmlNodeWithName: @"GetLastTradePrice" prefix: @"m"];	[getLastTradePriceElement addNamespace: @"http://trading-site.com.au" prefix: @"m"];	[getLastTradePriceElement addXmlNodeWithName: @"symbol" value: @"MOT"];
+	XmlDocument *document = [[[XmlDocument alloc] initWithName: @"envelope" prefix: @"soap"] autorelease];
+	[document addNamespace: @"http://schemas.xmlsoap.org/soap/envelope/" prefix: @"soap"];	[document setAttribute: @"soap:encodingStyle" value: @"http://schemas.xmlsoap.org/soap/encoding/"];	XmlNode *bodyElement = [document addXmlNodeWithName: @"body" prefix: @"soap"];	XmlNode *getLastTradePriceElement = [bodyElement addXmlNodeWithName: @"GetLastTradePrice" prefix: @"m"];	[getLastTradePriceElement addNamespace: @"http://trading-site.com.au" prefix: @"m"];	[getLastTradePriceElement addXmlNodeWithName: @"symbol" value: @"MOT"];
 
 	NSLog([document asPrettyXmlString]);
 
