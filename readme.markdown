@@ -6,6 +6,12 @@ dXml was conceived when I was starting with ObjC and iPhone development. Seeing 
 * The ability to interact with web sites and handle the basic setup and communication.
 * The ability to talk to soap based web services, constructing and deconstructing messages as necessary.
 
+# Documentation
+
+dXml is documented thanks to [Tomaz's appledoc](http://github.com/tomaz/appledoc). This tool allows use to generate an XCode formatted document bundle which you can install into xcode.
+
+# The quick guide to dXml
+
 ## Building xml structures.
 
 The bulk of dXml's document model is handled by two class - XmlNode and TextNode.
