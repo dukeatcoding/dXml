@@ -16,3 +16,28 @@ XmlNode is the basic building block of the model. This means that every xml elem
 		<def>ghi</def>
 	</abc>
 
+When building this in the object mode, dXml will:
+
+1. Create an instance of XmlNode for the `<abc>` element.
+1. Create a second instance of XmlNode for the `<def>` element and add it as a sub node of the `<abc>` node.
+1. Create a TextNode for the string "hi" and add it as a sub node of the `<def>` node.
+
+TextNodes cannot have sub nodes. In tree terms, they can only be leaves. XmlNode on the other hand can have none, one or many sub nodes, being both branches and leaves. As a result, XmlNode has a range of messages that can be sent to it to manipulate it's sub nodes. Some of which operate on all the sub nodes it contains, some which take the names of sub XmlNodes as parameters. XmlNode also tracks the order of any sub nodes added so there are some messages which can take a index to retrieve a specific sub node.
+
+### Creating a model programmatically.
+
+Now lets look at creating a document model in code. Here's an example piece of code that creates the example xml we have used above:
+
+	XmlNode *rootElement = [[[XmlNode alloc] initWithName:  @"abc"] autorelease];	[rootElement addXmlNodeWithName: @"def" value: @"ghi"];
+
+Very simple. here's a much more practical and sophisticated example:
+
+	XmlDocument *document = [[[XmlDocument alloc] initWithName: @"envelope" prefix: @"soap"] autorelease];	[document addNamespace: @"http://schemas.xmlsoap.org/soap/envelope/" prefix: @"soap"];	[document setAttribute: @"soap:encodingStyle" value: @"http://schemas.xmlsoap.org/soap/encoding/"];	XmlNode *bodyElement = [document addXmlNodeWithName: @"body" prefix: @"soap"];	XmlNode *getLastTradePriceElement = [bodyElement addXmlNodeWithName: @"GetLastTradePrice" prefix: @"m"];	[getLastTradePriceElement addNamespace: @"http://trading-site.com.au" prefix: @"m"];	[getLastTradePriceElement addXmlNodeWithName: @"symbol" value: @"MOT"];
+
+	NSLog([document asPrettyXmlString]);
+
+Notice the introduction of XmlDocument. This is really just a simple extension of XmlNode, but it's presence will cause the the generated xml to also include the standard xml version declaration. Here's the xml you will see printed in the log:
+
+	<?xml version="1.0" encoding="UTF-8"?>	<soap:envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">		<soap:body>			<m:GetLastTradePrice xmlns:m="http://trading-site.com.au">				<symbol>MOT</symbol>			</m:GetLastTradePrice>		</soap:body>	</soap:envelope>
+
+### Creating a model from an xml source.
