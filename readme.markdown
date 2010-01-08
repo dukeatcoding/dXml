@@ -28,7 +28,8 @@ TextNodes cannot have sub nodes. In tree terms, they can only be leaves. XmlNode
 
 Now lets look at creating a document model in code. Here's an example piece of code that creates the example xml we have used above:
 
-	XmlNode *rootElement = [[[XmlNode alloc] initWithName:  @"abc"] autorelease];	[rootElement addXmlNodeWithName: @"def" value: @"ghi"];
+	XmlNode *rootElement = [[[XmlNode alloc] initWithName:  @"abc"] autorelease];
+	[rootElement addXmlNodeWithName: @"def" value: @"ghi"];
 
 Very simple. here's a much more practical and sophisticated example: 
 
@@ -54,3 +55,18 @@ Notice the introduction of XmlDocument. This is really just a simple extension o
 	</soap:envelope>
 
 ### Creating a model from an xml source.
+
+Ok, so that was good if you are doing this from scratch. but theres a second way to create a document model in dXml. This method utilises a NSString* containing xml, which is then parsed into the document model. here the same soap message from above using this method:
+
+	const NSString * WEB_SERVICE_XML = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+		@"<soap:envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\""
+		@" soap:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">"
+		@"<soap:body>"
+		@"<m:GetLastTradePrice xmlns:m=\"http://trading-site.com.au\">"
+		@"<symbol>MOT</symbol>"
+		@"</m:GetLastTradePrice>"
+		@"</soap:body>"
+		@"</soap:envelope>";
+
+	XmlParser *parser = [XmlParser parserWithXml: xml];	XmlDocument *xmlDoc = [parser parse];
+
