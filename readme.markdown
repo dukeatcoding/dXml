@@ -85,10 +85,8 @@ Seeing as XmlNode contains the major chunk of functionality, here is a list of s
 
 #### Constructors
 
-<table>
-	<tr>
-		<th>Message</th>
-		<th>xml</th>
+|Message|xml
+
 	</tr>
 	<tr>
 		<td>- (XmlNode *) initWithName: (NSString *) aName</td>
