@@ -84,9 +84,8 @@ Ok, so that was good if you are doing this from scratch. but theres a second way
 Seeing as XmlNode contains the major chunk of functionality, here is a list of some of the most common messages you may send to it and what they do:
 
 #### Constructors
-	- (XmlNode *) initWithName: (NSString *) aName;
-Results in:
-	<aName />
+|_. Message |_. xml|
+|- (XmlNode *) initWithName: (NSString *) aName;|<aName />|
 
 - (XmlNode *) initWithName: (NSString *) aName prefix: (NSString *) aPrefix;
 
