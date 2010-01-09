@@ -37,7 +37,7 @@ Now lets look at creating a document model in code. Here's an example piece of c
 	XmlNode *rootElement = [[[XmlNode alloc] initWithName:  @"abc"] autorelease];
 	[rootElement addXmlNodeWithName: @"def" value: @"ghi"];
 
-Very simple. here's a much more practical and sophisticated example: 
+Very simple. here's a much more practical example: 
 
 	XmlDocument *document = [[[XmlDocument alloc] initWithName: @"envelope" prefix: @"soap"] autorelease];
 	[document addNamespace: @"http://schemas.xmlsoap.org/soap/envelope/" prefix: @"soap"];
@@ -52,17 +52,19 @@ Very simple. here's a much more practical and sophisticated example:
 Notice the introduction of XmlDocument. This is really just a simple extension of XmlNode, but it's presence will cause the the generated xml to also include the standard xml version declaration. Here's the xml you will see printed in the log:
 
 	<?xml version="1.0" encoding="UTF-8"?>
-	<soap:envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<soap:envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+						soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 		<soap:body>
 			<m:GetLastTradePrice xmlns:m="http://trading-site.com.au">
 				<symbol>MOT</symbol>
 			</m:GetLastTradePrice>
 		</soap:body>
-	</soap:envelope>
+	</soap:envelope>
+
 
 ### Creating a model from an xml source.
 
-Ok, so that was good if you are doing this from scratch. but theres a second way to create a document model in dXml. This method utilises a NSString* containing xml, which is then parsed into the document model. here the same soap message from above using this method:
+Ok, so that was good if you are doing this from scratch. but theres a second way to create a document model in dXml. This method utilises a NSString* containing xml, which is then parsed into the document model. Here is the same soap message from above using this method:
 
 	const NSString * WEB_SERVICE_XML = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 		@"<soap:envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\""
@@ -77,3 +79,35 @@ Ok, so that was good if you are doing this from scratch. but theres a second way
 	XmlParser *parser = [XmlParser parserWithXml: xml];
 	XmlDocument *xmlDoc = [parser parse];
 
+### More about XmlNode
+
+Seeing as XmlNode contains the major chunk of functionality, here is a list of some of the most common messages you may send to it and what they do:
+
+#### Constructors
+	- (XmlNode *) initWithName: (NSString *) aName;
+Results in:
+	<aName />
+
+- (XmlNode *) initWithName: (NSString *) aName prefix: (NSString *) aPrefix;
+
+- (XmlNode *) xmlNodeWithName: (NSString *) aName;
+- (XmlNode *) nodeAtIndex: (int) index;
+- (void) addNode: (DMNode *) element;
+- (XmlNode *) addXmlNodeWithName: (NSString *) aName;
+- (XmlNode *) addXmlNodeWithName: (NSString *) aName prefix: (NSString *) aPrefix;
+- (XmlNode *) addXmlNodeWithName: (NSString *) aName value: (NSString *) aValue;
+- (XmlNode *) addXmlNodeWithName: (NSString *) aName prefix: (NSString *) aPrefix value: (NSString *) aValue;
+- (BOOL) hasXmlNodeWithName: (NSString *) aName;
+- (NSEnumerator *) nodes;
+- (NSEnumerator *) xmlNodesWithName: (NSString *) aName;
+- (void) addNamespace: (NSString *) aUrl prefix: (NSString *) aPrefix;
+- (NSEnumerator *) namespaces;
+- (void) setAttribute: (NSString *) aName value: (NSString *) aValue;
+- (NSString *) attributeValue: (NSString *) aName;
+- (NSEnumerator *) attributes;
+-(NSString *) value;
+-(TextNode *) addTextNodeWithValue: (NSString *) aValue;
+-(void) setValue: (NSString *) value;
+- (NSString *) asXmlString;
+- (NSString *) asPrettyXmlString;
+-(int) countNodes;
