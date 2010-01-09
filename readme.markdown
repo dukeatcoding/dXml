@@ -84,6 +84,7 @@ Ok, so that was good if you are doing this from scratch. but theres a second way
 Seeing as XmlNode contains the major chunk of functionality, here is a list of some of the most common messages you may send to it and what they do:
 
 #### Constructors
+***
 
 ##### - (XmlNode \*) initWithName: (NSString \*) *aName*</td>
 Produces in xml: `<aName />`
@@ -92,6 +93,7 @@ Produces in xml: `<aName />`
 Produces in xml: `<aPrefix:aName />`
 
 #### Search messages
+***
 
 ##### - (XmlNode \*) xmlNodeWithName: (NSString \*) *aName*;
 Returns the sub node with the specified name.
@@ -100,6 +102,7 @@ Returns the sub node with the specified name.
 Returns the sub node at the index. 
 
 #### Adding new sub nodes
+***
 
 ##### - (void) addNode: (DMNode \*) element;
 Appends the passed node to the list of nodes.
@@ -120,6 +123,7 @@ Creates a new XmlNode and appends it to the list of nodes.
 Creates a new TextNode and appends it to the list of nodes.
 
 #### Querying
+***
 
 ##### - (BOOL) hasXmlNodeWithName: (NSString \*) *aName*;
 Returns YES/TRUE if there is an XmlNode in the list of sub nodes with the passed name.
@@ -134,6 +138,7 @@ A shortcut message which assumes that there is only a single TextNode in the lis
 Returns the total number of sub nodes.
 
 #### Accessing sub nodes
+***
 
 ##### - (NSEnumerator \*) nodes;
 Provides access to all the sub nodes.
@@ -142,6 +147,7 @@ Provides access to all the sub nodes.
 Searches the sub nodes and only returns XmlNodes which have the passed name.
 
 #### Modifying nodes and values
+***
 
 ##### - (void) addNamespace: (NSString \*) *aUrl* prefix: (NSString \*) *aPrefix*;
 Adds a namespace declaration to the node. ie. `xmlns:aPrefix="aUrl"`
@@ -153,6 +159,7 @@ Adds or sets the value of an attribute.
 Another shortcut methods. This one assumes you only want a single TextNode with a value. If there are any current sub nodes they are removed before the new TextNode is created.
 
 #### Producing xml
+***
 
 ##### - (NSString \*) asXmlString;
 Compiles and returns the xml that this node and it's sub nodes represent as a single string.
