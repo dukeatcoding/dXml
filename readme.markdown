@@ -85,10 +85,10 @@ Seeing as XmlNode contains the major chunk of functionality, here is a list of s
 
 #### Constructors
 
-##### - (XmlNode *) initWithName: (NSString *) aName</td>
+##### - (XmlNode \*) initWithName: (NSString \*) *aName*</td>
 Produces in xml: `<aName />`
 
-##### - (XmlNode *) initWithName: (NSString *) <i>aName</i> prefix: (NSString *) aPrefix;
+##### - (XmlNode \*) initWithName: (NSString *) *aName* prefix: (NSString \*) *aPrefix*;
 Produces in xml: `<aPrefix:aName />`
 
 #### Search messages
