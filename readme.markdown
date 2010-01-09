@@ -93,24 +93,69 @@ Produces in xml: `<aPrefix:aName />`
 
 #### Search messages
 
-##### - (XmlNode *) xmlNodeWithName: (NSString *) aName;
-- (XmlNode *) nodeAtIndex: (int) index;
-- (void) addNode: (DMNode *) element;
-- (XmlNode *) addXmlNodeWithName: (NSString *) aName;
-- (XmlNode *) addXmlNodeWithName: (NSString *) aName prefix: (NSString *) aPrefix;
-- (XmlNode *) addXmlNodeWithName: (NSString *) aName value: (NSString *) aValue;
-- (XmlNode *) addXmlNodeWithName: (NSString *) aName prefix: (NSString *) aPrefix value: (NSString *) aValue;
-- (BOOL) hasXmlNodeWithName: (NSString *) aName;
-- (NSEnumerator *) nodes;
-- (NSEnumerator *) xmlNodesWithName: (NSString *) aName;
-- (void) addNamespace: (NSString *) aUrl prefix: (NSString *) aPrefix;
-- (NSEnumerator *) namespaces;
-- (void) setAttribute: (NSString *) aName value: (NSString *) aValue;
-- (NSString *) attributeValue: (NSString *) aName;
-- (NSEnumerator *) attributes;
--(NSString *) value;
--(TextNode *) addTextNodeWithValue: (NSString *) aValue;
--(void) setValue: (NSString *) value;
-- (NSString *) asXmlString;
-- (NSString *) asPrettyXmlString;
--(int) countNodes;
+##### - (XmlNode \*) xmlNodeWithName: (NSString \*) *aName*;
+Returns the sub node with the specified name.
+
+##### - (XmlNode \*) nodeAtIndex: (int) *index*;
+Returns the sub node at the index. 
+
+#### Adding new sub nodes
+
+##### - (void) addNode: (DMNode \*) element;
+Appends the passed node to the list of nodes.
+
+##### - (XmlNode \*) addXmlNodeWithName: (NSString \*) *aName*;
+Creates a new XmlNode and appends it to the list of nodes.
+
+##### - (XmlNode \*) addXmlNodeWithName: (NSString \*) *aName* prefix: (NSString \*) *aPrefix*;
+Creates a new XmlNode and appends it to the list of nodes.
+
+##### - (XmlNode \*) addXmlNodeWithName: (NSString \*) *aName* value: (NSString \*) *aValue*;
+Creates a new XmlNode and appends it to the list of nodes.
+
+##### - (XmlNode \*) addXmlNodeWithName: (NSString \*) *aName* prefix: (NSString \*) *aPrefix* value: (NSString \*) *aValue*;
+Creates a new XmlNode and appends it to the list of nodes.
+
+##### -(TextNode \*) addTextNodeWithValue: (NSString \*) *aValue*;
+Creates a new TextNode and appends it to the list of nodes.
+
+#### Querying
+
+##### - (BOOL) hasXmlNodeWithName: (NSString \*) *aName*;
+Returns YES/TRUE if there is an XmlNode in the list of sub nodes with the passed name.
+
+##### - (NSString \*) attributeValue: (NSString \*) *aName*;
+Returns the value of the attribute.
+
+##### -(NSString \*) value;
+A shortcut message which assumes that there is only a single TextNode in the list of nodes and returns it's value.
+
+##### -(int) countNodes;
+Returns the total number of sub nodes.
+
+#### Accessing sub nodes
+
+##### - (NSEnumerator \*) nodes;
+Provides access to all the sub nodes.
+
+##### - (NSEnumerator \*) xmlNodesWithName: (NSString \*) *aName*;
+Searches the sub nodes and only returns XmlNodes which have the passed name.
+
+#### Modifying nodes and values
+
+##### - (void) addNamespace: (NSString \*) *aUrl* prefix: (NSString \*) *aPrefix*;
+Adds a namespace declaration to the node. ie. `xmlns:aPrefix="aUrl"`
+
+##### - (void) setAttribute: (NSString \*) *aName* value: (NSString \*) *aValue*;
+Adds or sets the value of an attribute.
+
+##### -(void) setValue: (NSString \*) *value*;
+Another shortcut methods. This one assumes you only want a single TextNode with a value. If there are any current sub nodes they are removed before the new TextNode is created.
+
+#### Producing xml
+
+##### - (NSString \*) asXmlString;
+Compiles and returns the xml that this node and it's sub nodes represent as a single string.
+
+##### - (NSString \*) asPrettyXmlString;
+Compiles and returns the xml that this node and it's sub nodes represent as a single string, formatted for output into logs and files.
