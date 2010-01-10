@@ -6,8 +6,23 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		659F701410F7038600822900 /* Create distribution file */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 659F701710F703A500822900 /* Build configuration list for PBXAggregateTarget "Create distribution file" */;
+			buildPhases = (
+				659F701310F7038600822900 /* ShellScript */,
+			);
+			dependencies = (
+				659F70D010F858E500822900 /* PBXTargetDependency */,
+			);
+			name = "Create distribution file";
+			productName = "Dmg results";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		650176C110EDCDA100E5CBB1 /* UrlConnectionException.h in Headers */ = {isa = PBXBuildFile; fileRef = 650176BF10EDCDA100E5CBB1 /* UrlConnectionException.h */; };
+		650176C110EDCDA100E5CBB1 /* UrlConnectionException.h in Headers */ = {isa = PBXBuildFile; fileRef = 650176BF10EDCDA100E5CBB1 /* UrlConnectionException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		650176C210EDCDA100E5CBB1 /* UrlConnectionException.m in Sources */ = {isa = PBXBuildFile; fileRef = 650176C010EDCDA100E5CBB1 /* UrlConnectionException.m */; };
 		650176C310EDCDA100E5CBB1 /* UrlConnectionException.m in Sources */ = {isa = PBXBuildFile; fileRef = 650176C010EDCDA100E5CBB1 /* UrlConnectionException.m */; };
 		650E72B610AADB7500CE8A8E /* XmlParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 650E72B510AADB7500CE8A8E /* XmlParserTests.m */; };
@@ -59,6 +74,7 @@
 		65894D1F10D515F500AF89C0 /* TextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D1D10D515F500AF89C0 /* TextNode.m */; };
 		65894D3210D51A8D00AF89C0 /* XmlNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 65894D3010D51A8D00AF89C0 /* XmlNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65894D3310D51A8D00AF89C0 /* XmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D3110D51A8D00AF89C0 /* XmlNode.m */; };
+		659F700C10F7027600822900 /* readme.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 659F700610F7024600822900 /* readme.markdown */; };
 		65B947DB10CE214E00F7B4D4 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B947DA10CE214E00F7B4D4 /* OCMock.framework */; };
 		65B947DE10CE215A00F7B4D4 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65B947DA10CE214E00F7B4D4 /* OCMock.framework */; };
 		65BB813410CBC76400959C05 /* WebServiceException.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BB813110CBC76400959C05 /* WebServiceException.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +122,13 @@
 			remoteGlobalIDString = 65E646E910955DD70055AA46;
 			remoteInfo = "dXml Tests";
 		};
+		659F70CF10F858E500822900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 656847BE10D7000B0031C348;
+			remoteInfo = Documentation;
+		};
 		65E646F010955DFF0055AA46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -123,6 +146,16 @@
 			dstSubfolderSpec = 16;
 			files = (
 				65B947DE10CE215A00F7B4D4 /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659F701210F7029000822900 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				659F700C10F7027600822900 /* readme.markdown in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +207,7 @@
 		65894D1D10D515F500AF89C0 /* TextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNode.m; sourceTree = "<group>"; };
 		65894D3010D51A8D00AF89C0 /* XmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlNode.h; sourceTree = "<group>"; };
 		65894D3110D51A8D00AF89C0 /* XmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNode.m; sourceTree = "<group>"; };
+		659F700610F7024600822900 /* readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.markdown; sourceTree = "<group>"; };
 		65B947DA10CE214E00F7B4D4 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/derek/tools/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		65BB813110CBC76400959C05 /* WebServiceException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceException.h; sourceTree = "<group>"; };
 		65BB813210CBC76400959C05 /* WebServiceException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceException.m; sourceTree = "<group>"; };
@@ -251,6 +285,7 @@
 		0867D691FE84028FC02AAC07 /* dXml */ = {
 			isa = PBXGroup;
 			children = (
+				659F700610F7024600822900 /* readme.markdown */,
 				65F460C810941073008AF68E /* tests */,
 				08FB77AEFE84172EC02AAC07 /* code */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -468,7 +503,7 @@
 /* Begin PBXLegacyTarget section */
 		656847BE10D7000B0031C348 /* Documentation */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = " -p dXml -i src/code/ -o docs -t ../../.appledoc -d ../../tools/Doxygen.app/Contents/Resources/doxygen -c doxygen-appledoc.config --clean-before-build --xhtml-bordered-issues --docset --docplist docset.plist";
+			buildArgumentsString = " -p dXml -i src/code/ -o $CONFIGURATION/v$CURRENT_PROJECT_VERSION/docs -t ../../.appledoc -d ../../tools/Doxygen.app/Contents/Resources/doxygen -c doxygen-appledoc.config --xhtml-bordered-issues --docset --docplist docset.plist";
 			buildConfigurationList = 656847C110D700290031C348 /* Build configuration list for PBXLegacyTarget "Documentation" */;
 			buildPhases = (
 			);
@@ -509,6 +544,7 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
+				659F701210F7029000822900 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -535,9 +571,26 @@
 				D2AAC07D0554694100DB518D /* dXml */,
 				65E646E910955DD70055AA46 /* dXml Tests */,
 				656847BE10D7000B0031C348 /* Documentation */,
+				659F701410F7038600822900 /* Create distribution file */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		659F701310F7038600822900 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\necho Building dmg of project ...\n\nFILE_DIR=\"$PROJECT_DIR/$CONFIGURATION/v$CURRENT_PROJECT_VERSION\"\nFINAL_DMG=\"$PROJECT_DIR/$CONFIGURATION/$PROJECT-$CURRENT_PROJECT_VERSION.dmg\"\n\nhdiutil create \"$FINAL_DMG\" -ov -srcdir $FILE_DIR -volname \"$PROJECT_NAME v$CURRENT_PROJECT_VERSION\" -attach\n\necho done.";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65E646E710955DD70055AA46 /* Sources */ = {
@@ -621,6 +674,11 @@
 			target = 65E646E910955DD70055AA46 /* dXml Tests */;
 			targetProxy = 656847D310D701F80031C348 /* PBXContainerItemProxy */;
 		};
+		659F70D010F858E500822900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 656847BE10D7000B0031C348 /* Documentation */;
+			targetProxy = 659F70CF10F858E500822900 /* PBXContainerItemProxy */;
+		};
 		65E646F110955DFF0055AA46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* dXml */;
@@ -656,7 +714,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/dXml.dst;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(CONFIGURATION)";
 				EXECUTABLE_PREFIX = lib_;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -665,9 +725,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dXml_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
+				INSTALL_PATH = "/v$(CURRENT_PROJECT_VERSION)";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = dXml;
+				PUBLIC_HEADERS_FOLDER_PATH = "/v$(CURRENT_PROJECT_VERSION)";
 			};
 			name = Release;
 		};
@@ -675,6 +736,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CURRENT_PROJECT_VERSION = 0.0.1;
+				DEPLOYMENT_LOCATION = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -687,7 +750,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PUBLIC_HEADERS_FOLDER_PATH = "public headers";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphonesimulator3.1.2;
 			};
@@ -698,14 +760,14 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CURRENT_PROJECT_VERSION = 0.0.1;
+				DEPLOYMENT_LOCATION = NO;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				PUBLIC_HEADERS_FOLDER_PATH = "public headers";
 				SDKROOT = iphonesimulator3.1.2;
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -730,11 +792,33 @@
 			};
 			name = Release;
 		};
+		659F701510F7038600822900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Dmg results";
+			};
+			name = Debug;
+		};
+		659F701610F7038600822900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Dmg results";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		65E646ED10955DD80055AA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -771,6 +855,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -830,6 +915,15 @@
 			buildConfigurations = (
 				656847BF10D7000B0031C348 /* Debug */,
 				656847C010D7000B0031C348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659F701710F703A500822900 /* Build configuration list for PBXAggregateTarget "Create distribution file" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659F701510F7038600822900 /* Debug */,
+				659F701610F7038600822900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
