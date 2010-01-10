@@ -246,7 +246,7 @@
 		65FC482010BE30850094492E /* WebServiceResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceResponseTests.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* dXml_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dXml_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* lib_dXml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = lib_dXml.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libdXml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdXml.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +276,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* lib_dXml.a */,
+				D2AAC07E0554694100DB518D /* libdXml.a */,
 				65E646EA10955DD70055AA46 /* dXml Tests.app */,
 			);
 			name = Products;
@@ -552,7 +552,7 @@
 			);
 			name = dXml;
 			productName = dXml;
-			productReference = D2AAC07E0554694100DB518D /* lib_dXml.a */;
+			productReference = D2AAC07E0554694100DB518D /* libdXml.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -736,7 +736,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 0.0.2;
 				DEPLOYMENT_LOCATION = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -759,7 +759,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 0.0.2;
 				DEPLOYMENT_LOCATION = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;

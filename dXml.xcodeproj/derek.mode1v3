@@ -261,8 +261,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -303,11 +301,6 @@
 							<array>
 								<string>0867D691FE84028FC02AAC07</string>
 								<string>65F460C810941073008AF68E</string>
-								<string>65D0922A10B92B180061CC61</string>
-								<string>65320BB310BCF0FD0056BDDF</string>
-								<string>08FB77AEFE84172EC02AAC07</string>
-								<string>65D0922510B913440061CC61</string>
-								<string>65D4ABCE10D5126F003E356D</string>
 								<string>32C88DFF0371C24200C91783</string>
 								<string>0867D69AFE84028FC02AAC07</string>
 								<string>034768DFFF38A50411DB9C8B</string>
@@ -318,10 +311,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>4</integer>
-									<integer>3</integer>
-									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -349,7 +338,7 @@
 							<real>48</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>77 116 1451 934 0 0 1920 1178 </string>
+						<string>62 224 1451 934 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -360,12 +349,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>XmlNode.h</string>
+								<string>readme.markdown</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -373,11 +364,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>XmlNode.h</string>
+										<string>readme.markdown</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>652009D810FA0A29008747C6</string>
+										<string>65200AD210FA0F4A008747C6</string>
 										<key>history</key>
 										<array>
 											<string>65AFA7291095482400355353</string>
@@ -451,7 +442,6 @@
 											<string>65CA2CA410F6F00900370635</string>
 											<string>65CA2CA510F6F00900370635</string>
 											<string>65CA2CA610F6F00900370635</string>
-											<string>65CA2CA710F6F00900370635</string>
 											<string>659F700F10F7029000822900</string>
 											<string>659F707110F710DB00822900</string>
 											<string>659F707210F710DB00822900</string>
@@ -466,14 +456,15 @@
 											<string>659F707C10F710DB00822900</string>
 											<string>659F707D10F710DB00822900</string>
 											<string>659F70D610F86B6000822900</string>
-											<string>6520094210F8C58B008747C6</string>
 											<string>6520094510F8C58B008747C6</string>
 											<string>6520094610F8C58B008747C6</string>
 											<string>652009D310FA0A29008747C6</string>
 											<string>652009D410FA0A29008747C6</string>
 											<string>652009D510FA0A29008747C6</string>
 											<string>652009D610FA0A29008747C6</string>
-											<string>652009D710FA0A29008747C6</string>
+											<string>65200A0910FA0E73008747C6</string>
+											<string>65200A0A10FA0E73008747C6</string>
+											<string>6520094210F8C58B008747C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -485,14 +476,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1008, 622}}</string>
+								<string>{{0, 0}, {1008, 888}}</string>
 								<key>RubberWindowFrame</key>
-								<string>77 116 1451 934 0 0 1920 1178 </string>
+								<string>62 224 1451 934 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>622pt</string>
+							<string>888pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -505,14 +496,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 627}, {1008, 266}}</string>
+								<string>{{0, 893}, {1008, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>77 116 1451 934 0 0 1920 1178 </string>
+								<string>62 224 1451 934 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>266pt</string>
+							<string>0pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -684,7 +675,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>284822057.94248497</real>
+	<real>284823370.742737</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -707,7 +698,7 @@
 		<string>/Users/derek/projects/dXml/dXml.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>77 116 1451 934 0 0 1920 1178 </string>
+	<string>62 224 1451 934 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

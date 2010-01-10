@@ -8,7 +8,19 @@ dXml was conceived when I was starting with ObjC and iPhone development. Seeing 
 
 # Documentation
 
-dXml is documented thanks to [Tomaz's appledoc](http://github.com/tomaz/appledoc). This tool allows use to generate an XCode formatted document bundle which you can install into xcode.
+dXml is documented thanks to [Tomaz's appledoc](http://github.com/tomaz/appledoc). This tool allows use to generate an XCode formatted document bundle which you can install into xcode. To install this documentation into Xcode, simply copy the docs/docset directory into ~/Library/Developer/Shared/Documentation/Docsets directory and it should immediately become available in xcode's help system.
+
+# Adding to your iPhone project
+
+Adding this library to you project is simple. Follow these steps:
+
+1. Drag the contents of the dmg distribution file into a folder on your system. For example ~/ext/api/dXml
+1. Open your xcode project and navigate to *Frameworks*.
+1. Add a new folder in Frameworks. This is not necessary but I'd recommend it because it helps keeps things organised. I'd call it *dXml*.
+1. Open the installation folder in finder and select all the header files and the lib_dXml.a static library file and drag them to the newly created folder in xcode. 
+1. XCode will prompt as to whether you want to copy the files into the project. I generally say no.
+
+That is all you should need to do.
 
 # The quick guide to dXml
 
