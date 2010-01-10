@@ -91,6 +91,22 @@ Ok, so that was good if you are doing this from scratch. but theres a second way
 	XmlParser *parser = [XmlParser parserWithXml: xml];
 	XmlDocument *xmlDoc = [parser parse];
 
+### Parsing xml
+
+dXml's parsing abilities are of course basd around the SDK NSXMLParser class. However I have wrapped all the internally functionality with some tweaks of my own. Mainly to process a stream of xml into the document model. Because developers also regaularly want to parse xml that is stored in NSString objects rather than the default NSData and NSUrl sources, I've added that functionality as well. 
+
+In the previous section there is an example of using the XmlParser. It's not hard, just two lines of code:
+
+	XmlParser *parser = [XmlParser parserWithXml: xml];
+	XmlDocument *xmlDoc = [parser parse];
+
+There are two other variations on the factory message `[XmlParser parserWithXml: _xml_]`. `[XmlParser parserWithData: _data_]` and `[XmlParser parserWithUrl: _url_]`. These provide the same parsing abilities as supplied by NSXMLParser.
+
+
+### Generating xml
+
+### Slick trick - templating xml
+
 ### More about XmlNode
 
 Seeing as XmlNode contains the major chunk of functionality, here is a list of some of the most common messages you may send to it and what they do:
@@ -178,3 +194,11 @@ Compiles and returns the xml that this node and it's sub nodes represent as a si
 
 ##### - (NSString \*) asPrettyXmlString;
 Compiles and returns the xml that this node and it's sub nodes represent as a single string, formatted for output into logs and files.
+
+## Sending messages to servers
+
+### Any old server
+
+
+
+### Soap Web Services
