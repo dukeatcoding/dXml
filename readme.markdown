@@ -93,19 +93,19 @@ Ok, so that was good if you are doing this from scratch. but theres a second way
 
 ### Parsing xml
 
-dXml's parsing abilities are of course basd around the SDK NSXMLParser class. However I have wrapped all the internally functionality with some tweaks of my own. Mainly to process a stream of xml into the document model. Because developers also regaularly want to parse xml that is stored in NSString objects rather than the default NSData and NSUrl sources, I've added that functionality as well. 
+dXml's parsing abilities are of course based around the SDK NSXMLParser class. However I have wrapped all the internally functionality with some tweaks of my own. Mainly to process a stream of xml into the document model. Because developers also regaularly want to parse xml that is stored in NSString objects rather than the default NSData and NSUrl sources, I've added that functionality as well. 
 
 In the previous section there is an example of using the XmlParser. It's not hard, just two lines of code:
 
 	XmlParser *parser = [XmlParser parserWithXml: xml];
 	XmlDocument *xmlDoc = [parser parse];
 
-There are two other variations on the factory message `[XmlParser parserWithXml: _xml_]`. `[XmlParser parserWithData: _data_]` and `[XmlParser parserWithUrl: _url_]`. These provide the same parsing abilities as supplied by NSXMLParser.
+There are two other variations on the factory message `[XmlParser parserWithXml: xml]`. `[XmlParser parserWithData: data]` and `[XmlParser parserWithUrl: url]`. These provide the same parsing abilities as supplied by NSXMLParser.
 
 
 ### Generating xml
 
-### Slick trick - templating xml
+By the time you are reading this you should already have figured out the two methods for generating xml from the document model. `[model asXmlString]` and `[model asPrettyXmlString]`. Usually in code you wout use asXmlString to produce output for a server request. asPrettyXmlString is just present to help with deb logs.
 
 ### More about XmlNode
 
@@ -199,6 +199,44 @@ Compiles and returns the xml that this node and it's sub nodes represent as a si
 
 ### Any old server
 
+The core class for talking to a server is the UrlConnection class. It provides the ability to handle self signed certificates from servers (which is great for developers), userids and passwords, headers and posting requests to servers and returniong the response as a NSData object.
 
+This class is pretty basic at the moment and has only been tested with some basic security setups. A lot more needs to be done here in the realm of security.
 
 ### Soap Web Services
+
+SoapWebServiceConnection is the main class for making soap web service calls. It enhances the UrlConnection by adding soap message generation, soap actions and soap security. Here's is an example of a complete interaction with a server based on using this class and all of the previous stuff in this readme. This time we will use a banking scenario.
+
+	#define BANKING_SECURE @"https://localhost:8181/services/Banking"
+	#define BALANCE_ACTION @"\"http://www.dhcbank.com/banking/balance\""
+	#define MODEL_SCHEMA @"http://www.dhcbank.com/banking/model"
+	#define BASE_SCHEMA @"http://www.dhcbank.com/banking/schema"
+
+	// Soap payload as an NSString
+	NSString *xml = @"<dhc:balance xmlns:dhc=\"" MODEL_SCHEMA "\">" 
+					@" forAccountNumber>1234</forAccountNumber>"
+					@"</dhc:balance>";
+
+	// Or a soap payload as a document mode
+	// XmlNode *xml = [[[XmlNode alloc] initWithName: @"balance" prefix: @"dhc"] autorelease];
+	// [accountBalance addNamespace: MODEL_SCHEMA prefix: @"dhc"];
+	// [accountBalance addXmlNodeWithName: @"forAccountNumber" prefix: nil value: @"1234"];
+
+	//Get a connection object and call the service.
+	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	[service setUsername:@"username" password"@"password"];
+	WebServiceResponse *response = [service postXmlStringPayload: xml];
+
+	// Or the DM version.
+	// WebServiceResponse *response = [service postXmlNodePayload: xml];
+
+	// Check for soap faults.
+	if ([response isKindOfClass :[WebServiceFault class]]) {
+		WebServiceFault *fault = (WebServiceFault *) response;
+		NSLog(@"Error %@", [fault message]);
+		return;
+	}
+
+	NSLog(@"Balance = &@", [[response bodyContent] xmlNodeWithName: @"balance"].value];
+
+Notice the section in there for handling web service faults.
