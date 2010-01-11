@@ -208,9 +208,8 @@ This class is pretty basic at the moment and has only been tested with some basi
 SoapWebServiceConnection is the main class for making soap web service calls. It enhances the UrlConnection by adding soap message generation, soap actions and soap security. Here's is an example of a complete interaction with a server based on using this class and all of the previous stuff in this readme. This time we will use a banking scenario.
 
 	#define BANKING_SECURE @"https://localhost:8181/services/Banking"
-	#define BALANCE_ACTION @"\"http://www.dhcbank.com/banking/balance\""
-	#define MODEL_SCHEMA @"http://www.dhcbank.com/banking/model"
-	#define BASE_SCHEMA @"http://www.dhcbank.com/banking/schema"
+	#define BALANCE_ACTION @"\"http://localhost:8080/banking/balance\""
+	#define MODEL_SCHEMA @"http://localhost/banking/model"
 
 	// Soap payload as an NSString
 	NSString *xml = @"<dhc:balance xmlns:dhc=\"" MODEL_SCHEMA "\">" 
