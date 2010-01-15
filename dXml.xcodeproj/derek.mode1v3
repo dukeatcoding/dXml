@@ -371,7 +371,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>656046E0110032C300BE761F</string>
+										<string>656046EC1100337D00BE761F</string>
 										<key>history</key>
 										<array>
 											<string>65AFA7291095482400355353</string>
@@ -468,7 +468,7 @@
 											<string>656046B711002BC200BE761F</string>
 											<string>656046C911002FF000BE761F</string>
 											<string>656046D21100308400BE761F</string>
-											<string>656046D31100308400BE761F</string>
+											<string>656046EB1100337D00BE761F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -679,7 +679,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>285225667.10109103</real>
+	<real>285225853.60622698</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
