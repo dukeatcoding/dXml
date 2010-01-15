@@ -211,6 +211,7 @@
 			656046D41100308400BE761F /* PBXTextBookmark */ = 656046D41100308400BE761F /* PBXTextBookmark */;
 			656046D7110030DF00BE761F /* PBXTextBookmark */ = 656046D7110030DF00BE761F /* PBXTextBookmark */;
 			656046DA110031D100BE761F /* PBXTextBookmark */ = 656046DA110031D100BE761F /* PBXTextBookmark */;
+			656046DD1100327B00BE761F /* PBXTextBookmark */ = 656046DD1100327B00BE761F /* PBXTextBookmark */;
 			656847EB10D704670031C348 = 656847EB10D704670031C348 /* PBXTextBookmark */;
 			6568480510D704670031C348 = 6568480510D704670031C348 /* PBXTargetBookmark */;
 			6568488810D713920031C348 = 6568488810D713920031C348 /* PBXTextBookmark */;
@@ -1339,6 +1340,16 @@
 		vrLen = 3335;
 		vrLoc = 0;
 	};
+	656046DD1100327B00BE761F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 659F700610F7024600822900 /* readme.markdown */;
+		name = "readme.markdown: 5";
+		rLen = 0;
+		rLoc = 300;
+		rType = 0;
+		vrLen = 3335;
+		vrLoc = 0;
+	};
 	6568477910D669080031C348 /* TextNodeTests.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {947, 846}}";
@@ -1456,7 +1467,7 @@
 	659F700610F7024600822900 /* readme.markdown */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {947, 3263}}";
-			sepNavSelRange = "{36, 0}";
+			sepNavSelRange = "{300, 0}";
 			sepNavVisRange = "{0, 3335}";
 			sepNavWindowFrame = "{{830, 300}, {1049, 787}}";
 		};
