@@ -1,1 +1,0 @@
-////  XmlException.m//  dXml////  Created by Derek Clarkson on 30/10/09.//  Copyright 2009 Derek Clarkson. All rights reserved.//#import "XmlException.h"@implementation XmlException@end
