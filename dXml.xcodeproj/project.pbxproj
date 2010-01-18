@@ -63,6 +63,7 @@
 		655E14E010CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E14DB10CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m */; };
 		655E153910CE0DE100D8E6D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E14F710CE0D7F00D8E6D1 /* UIKit.framework */; };
 		655E153A10CE0DEF00D8E6D1 /* libGHUnitIPhone3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E14DD10CE0B8000D8E6D1 /* libGHUnitIPhone3_0.a */; };
+		656047D411046FA300BE761F /* changeLog.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 654EE4AD10FB5CF60023F57D /* changeLog.markdown */; };
 		6568477B10D669080031C348 /* TextNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568477910D669080031C348 /* TextNodeTests.m */; };
 		6568478D10D66A6D0031C348 /* XmlNamespaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568478B10D66A6D0031C348 /* XmlNamespaceTests.m */; };
 		6568497310D73EA60031C348 /* UrlConnection+NSURLConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E11D910CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.m */; };
@@ -183,6 +184,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				656047D411046FA300BE761F /* changeLog.markdown in CopyFiles */,
 				659F700C10F7027600822900 /* readme.markdown in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,7 +822,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CURRENT_PROJECT_VERSION = 0.0.2;
+				CURRENT_PROJECT_VERSION = 0.0.3;
 				DEPLOYMENT_LOCATION = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -849,7 +851,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CURRENT_PROJECT_VERSION = 0.0.2;
+				CURRENT_PROJECT_VERSION = 0.0.3;
 				DEPLOYMENT_LOCATION = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
