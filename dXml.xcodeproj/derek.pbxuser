@@ -62,7 +62,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Target_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					769,
+					912,
 					20,
 					48,
 					43,
@@ -218,6 +218,9 @@
 			656046EF1100387C00BE761F /* PBXTextBookmark */ = 656046EF1100387C00BE761F /* PBXTextBookmark */;
 			656046F01100387C00BE761F /* PBXTextBookmark */ = 656046F01100387C00BE761F /* PBXTextBookmark */;
 			656046F11100387C00BE761F /* PBXTextBookmark */ = 656046F11100387C00BE761F /* PBXTextBookmark */;
+			656046F211046A8C00BE761F /* PBXTextBookmark */ = 656046F211046A8C00BE761F /* PBXTextBookmark */;
+			656046F311046A8C00BE761F /* PBXTextBookmark */ = 656046F311046A8C00BE761F /* PBXTextBookmark */;
+			656046F411046A8C00BE761F /* PBXTextBookmark */ = 656046F411046A8C00BE761F /* PBXTextBookmark */;
 			656847EB10D704670031C348 = 656847EB10D704670031C348 /* PBXTextBookmark */;
 			6568480510D704670031C348 = 6568480510D704670031C348 /* PBXTargetBookmark */;
 			6568488810D713920031C348 = 6568488810D713920031C348 /* PBXTextBookmark */;
@@ -1161,7 +1164,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 10";
 		rLen = 0;
-		rLoc = 590;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 3311;
 		vrLoc = 0;
@@ -1281,7 +1284,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 10";
 		rLen = 0;
-		rLoc = 590;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 3206;
 		vrLoc = 0;
@@ -1291,7 +1294,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 252";
 		rLen = 0;
-		rLoc = 11915;
+		rLoc = 11580;
 		rType = 0;
 		vrLen = 3400;
 		vrLoc = 0;
@@ -1311,7 +1314,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 252";
 		rLen = 0;
-		rLoc = 11915;
+		rLoc = 11580;
 		rType = 0;
 		vrLen = 3400;
 		vrLoc = 0;
@@ -1321,7 +1324,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 9";
 		rLen = 0;
-		rLoc = 574;
+		rLoc = 552;
 		rType = 0;
 		vrLen = 3385;
 		vrLoc = 15;
@@ -1331,7 +1334,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 14";
 		rLen = 0;
-		rLoc = 1021;
+		rLoc = 999;
 		rType = 0;
 		vrLen = 3314;
 		vrLoc = 0;
@@ -1341,7 +1344,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 3";
 		rLen = 0;
-		rLoc = 38;
+		rLoc = 17;
 		rType = 0;
 		vrLen = 3335;
 		vrLoc = 0;
@@ -1351,7 +1354,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 5";
 		rLen = 0;
-		rLoc = 300;
+		rLoc = 278;
 		rType = 0;
 		vrLen = 3335;
 		vrLoc = 0;
@@ -1361,7 +1364,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 4";
 		rLen = 0;
-		rLoc = 38;
+		rLoc = 17;
 		rType = 0;
 		vrLen = 3233;
 		vrLoc = 0;
@@ -1371,7 +1374,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 4";
 		rLen = 0;
-		rLoc = 38;
+		rLoc = 17;
 		rType = 0;
 		vrLen = 3231;
 		vrLoc = 0;
@@ -1381,7 +1384,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 6";
 		rLen = 0;
-		rLoc = 320;
+		rLoc = 298;
 		rType = 0;
 		vrLen = 3231;
 		vrLoc = 0;
@@ -1391,7 +1394,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 10";
 		rLen = 0;
-		rLoc = 574;
+		rLoc = 552;
 		rType = 0;
 		vrLen = 3232;
 		vrLoc = 0;
@@ -1414,6 +1417,36 @@
 		rLoc = 132;
 		rType = 0;
 		vrLen = 1939;
+		vrLoc = 0;
+	};
+	656046F211046A8C00BE761F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 65D4ABD110D512C0003E356D /* DMNode.h */;
+		name = "DMNode.h: 48";
+		rLen = 0;
+		rLoc = 1939;
+		rType = 0;
+		vrLen = 1939;
+		vrLoc = 0;
+	};
+	656046F311046A8C00BE761F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 659F700610F7024600822900 /* readme.markdown */;
+		name = "readme.markdown: 10";
+		rLen = 0;
+		rLoc = 552;
+		rType = 0;
+		vrLen = 3233;
+		vrLoc = 0;
+	};
+	656046F411046A8C00BE761F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 659F700610F7024600822900 /* readme.markdown */;
+		name = "readme.markdown: 258";
+		rLen = 0;
+		rLoc = 12091;
+		rType = 0;
+		vrLen = 4390;
 		vrLoc = 0;
 	};
 	6568477910D669080031C348 /* TextNodeTests.m */ = {
@@ -1532,9 +1565,9 @@
 	};
 	659F700610F7024600822900 /* readme.markdown */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {947, 3263}}";
-			sepNavSelRange = "{574, 0}";
-			sepNavVisRange = "{0, 3232}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 3744}}";
+			sepNavSelRange = "{12091, 0}";
+			sepNavVisRange = "{0, 4390}";
 			sepNavWindowFrame = "{{830, 300}, {1049, 787}}";
 		};
 	};
@@ -1823,7 +1856,7 @@
 		fRef = 659F700610F7024600822900 /* readme.markdown */;
 		name = "readme.markdown: 198";
 		rLen = 0;
-		rLoc = 9777;
+		rLoc = 9753;
 		rType = 0;
 		vrLen = 3384;
 		vrLoc = 15;
@@ -2325,7 +2358,7 @@
 	65D4ABD110D512C0003E356D /* DMNode.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {947, 871}}";
-			sepNavSelRange = "{132, 0}";
+			sepNavSelRange = "{1939, 0}";
 			sepNavVisRange = "{0, 1939}";
 			sepNavWindowFrame = "{{15, 15}, {1179, 1158}}";
 		};

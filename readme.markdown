@@ -1,7 +1,5 @@
 # Introduction
  
-This is a test of LF
-
 dXml was conceived when I was starting with ObjC and iPhone development. Seeing a number of people on the web looking for a DOM style parser and being interested in testing soap web services for a project, I decided to write a static library which contained the following features:
 
 * A parser to convert a stream of xml into an object model.
@@ -30,7 +28,7 @@ That is all you should need to do.
 
 The bulk of dXml's document model is handled by two class - XmlNode and TextNode.
 
-XmlNode is the basic building block of the model. This means that every xml element is represented by a XmlNode instances. For example, deltas look at the following xml code:
+XmlNode is the basic building block of the model. This means that every xml element is represented by a XmlNode instances. For example, lets look at the following xml code:
 
 	<abc>
 		<def>ghi</def>
@@ -219,19 +217,19 @@ This class is pretty basic at the moment and has only been tested with some basi
 
 SoapWebServiceConnection is the main class for making soap web service calls. It enhances the UrlConnection by adding soap message generation, soap actions and soap security. Here's is an example of a complete interaction with a server based on using this class and all of the previous stuff in this readme. This time we will use a banking scenario.
 
+First lets assume you ave a header somwhere with:
+
 	#define BANKING_SECURE @"https://localhost:8181/services/Banking"
 	#define BALANCE_ACTION @"\"http://localhost:8080/banking/balance\""
 	#define MODEL_SCHEMA @"http://localhost/banking/model"
+
+
+#### 1st with astring based xml:
 
 	// Soap payload as an NSString
 	NSString *xml = @"<dhc:balance xmlns:dhc=\"" MODEL_SCHEMA "\">" 
 					@" forAccountNumber>1234</forAccountNumber>"
 					@"</dhc:balance>";
-
-	// Or a soap payload as a document mode
-	// XmlNode *xml = [[[XmlNode alloc] initWithName: @"balance" prefix: @"dhc"] autorelease];
-	// [accountBalance addNamespace: MODEL_SCHEMA prefix: @"dhc"];
-	// [accountBalance addXmlNodeWithName: @"forAccountNumber" prefix: nil value: @"1234"];
 
 	//Get a connection object and call the service.
 	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
@@ -239,8 +237,25 @@ SoapWebServiceConnection is the main class for making soap web service calls. It
 	NSError *error = nil;
 	WebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
 
-	// Or the DM version.
-	// WebServiceResponse *response = [service postXmlNodePayload: xml errorVar:&error];
+	// Check for errors.
+	if (error != nil) {
+		// Do something about the error.
+		return;
+	}
+
+	NSLog(@"Balance = &@", [[response bodyContent] xmlNodeWithName: @"balance"].value];
+
+#### And now usign the api:
+
+	XmlNode *xml = [[[XmlNode alloc] initWithName: @"balance" prefix: @"dhc"] autorelease];
+	[accountBalance addNamespace: MODEL_SCHEMA prefix: @"dhc"];
+	[accountBalance addXmlNodeWithName: @"forAccountNumber" prefix: nil value: @"1234"];
+
+	//Get a connection object and call the service.
+	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	[service setUsername:@"username" password"@"password"];
+	NSError *error = nil;
+	WebServiceResponse *response = [service postXmlNodePayload: xml errorVar:&error];
 
 	// Check for errors.
 	if (error != nil) {
