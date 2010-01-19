@@ -1,3 +1,8 @@
+# DXml v0.0.3 ()
+
+* Added more defines to SoapWebServiceConnection.h to help with extracting data from responses.
+* Added a new category to NSError to manage soap fault details.
+
 # dXml v0.0.2 (18 Jan 2010)
 
 * Added changelog to release build and dmg file.

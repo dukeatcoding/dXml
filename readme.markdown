@@ -265,3 +265,6 @@ First lets assume you ave a header somwhere with:
 
 	NSLog(@"Balance = &@", [[response bodyContent] xmlNodeWithName: @"balance"].value];
 
+### Extracting soap errors
+
+All soap errors are returned in standard NSError objects.

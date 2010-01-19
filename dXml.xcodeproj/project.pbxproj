@@ -63,7 +63,11 @@
 		655E14E010CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E14DB10CE0B8000D8E6D1 /* GHUnitIPhoneTestMain.m */; };
 		655E153910CE0DE100D8E6D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E14F710CE0D7F00D8E6D1 /* UIKit.framework */; };
 		655E153A10CE0DEF00D8E6D1 /* libGHUnitIPhone3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E14DD10CE0B8000D8E6D1 /* libGHUnitIPhone3_0.a */; };
-		656047D411046FA300BE761F /* changeLog.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 654EE4AD10FB5CF60023F57D /* changeLog.markdown */; };
+		656047D411046FA300BE761F /* ChangeLog.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 654EE4AD10FB5CF60023F57D /* ChangeLog.markdown */; };
+		656049F311047D0400BE761F /* NSError+SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 656049F211047D0400BE761F /* NSError+SoapFault.m */; };
+		656049F411047D0400BE761F /* NSError+SoapFault.h in Headers */ = {isa = PBXBuildFile; fileRef = 656049F111047D0400BE761F /* NSError+SoapFault.h */; };
+		656049F511047D0400BE761F /* NSError+SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 656049F211047D0400BE761F /* NSError+SoapFault.m */; };
+		656049F611047D0400BE761F /* NSError+SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 656049F211047D0400BE761F /* NSError+SoapFault.m */; };
 		6568477B10D669080031C348 /* TextNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568477910D669080031C348 /* TextNodeTests.m */; };
 		6568478D10D66A6D0031C348 /* XmlNamespaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6568478B10D66A6D0031C348 /* XmlNamespaceTests.m */; };
 		6568497310D73EA60031C348 /* UrlConnection+NSURLConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E11D910CCCFEE00D8E6D1 /* UrlConnection+NSURLConnectionDelegate.m */; };
@@ -87,7 +91,7 @@
 		65894D1F10D515F500AF89C0 /* TextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D1D10D515F500AF89C0 /* TextNode.m */; };
 		65894D3210D51A8D00AF89C0 /* XmlNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 65894D3010D51A8D00AF89C0 /* XmlNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65894D3310D51A8D00AF89C0 /* XmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65894D3110D51A8D00AF89C0 /* XmlNode.m */; };
-		659F700C10F7027600822900 /* readme.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 659F700610F7024600822900 /* readme.markdown */; };
+		659F700C10F7027600822900 /* ReadMe.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 659F700610F7024600822900 /* ReadMe.markdown */; };
 		65B947DB10CE214E00F7B4D4 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B947DA10CE214E00F7B4D4 /* OCMock.framework */; };
 		65B947DE10CE215A00F7B4D4 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65B947DA10CE214E00F7B4D4 /* OCMock.framework */; };
 		65BB81AC10CC82D900959C05 /* UrlConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BB81A910CC82D900959C05 /* UrlConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,6 +105,7 @@
 		65C4F72310C8BA5F009DB40E /* NSObject+SoapTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C4F72010C8BA5F009DB40E /* NSObject+SoapTemplates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65C4F72410C8BA5F009DB40E /* NSObject+SoapTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F72110C8BA5F009DB40E /* NSObject+SoapTemplates.m */; };
 		65C4F82E10C8DEC1009DB40E /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C4F82D10C8DEC1009DB40E /* Security.m */; };
+		65CA5B891105681100BAB73A /* License.markdown in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65CA5B82110566ED00BAB73A /* License.markdown */; };
 		65D0923010B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D0922D10B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m */; };
 		65D0951610BA435A0061CC61 /* dXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D0951510BA435A0061CC61 /* dXml.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65D4AACA10D21FCA003E356D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E647EC10955FCA0055AA46 /* CoreGraphics.framework */; };
@@ -184,8 +189,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				656047D411046FA300BE761F /* changeLog.markdown in CopyFiles */,
-				659F700C10F7027600822900 /* readme.markdown in CopyFiles */,
+				65CA5B891105681100BAB73A /* License.markdown in CopyFiles */,
+				656047D411046FA300BE761F /* ChangeLog.markdown in CopyFiles */,
+				659F700C10F7027600822900 /* ReadMe.markdown in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +208,7 @@
 		65320BAD10BCF0230056BDDF /* XmlDocumentParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlDocumentParserDelegate.h; sourceTree = "<group>"; };
 		65320BAE10BCF0230056BDDF /* XmlDocumentParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlDocumentParserDelegate.m; sourceTree = "<group>"; };
 		6532522710BE4DFE00007475 /* SoapWebserviceConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapWebserviceConnectionTests.m; sourceTree = "<group>"; };
-		654EE4AD10FB5CF60023F57D /* changeLog.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = changeLog.markdown; sourceTree = "<group>"; };
+		654EE4AD10FB5CF60023F57D /* ChangeLog.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog.markdown; sourceTree = "<group>"; };
 		654EE4B810FB638B0023F57D /* dXml Integration Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dXml Integration Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654EE4C010FB63F70023F57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		654EE4C210FB63F70023F57D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -229,13 +235,15 @@
 		655E14DE10CE0B8000D8E6D1 /* NSException+GHTestFailureExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSException+GHTestFailureExceptions.h"; path = "../../tools/libGHUnitIPhone3_0-0/NSException+GHTestFailureExceptions.h"; sourceTree = SOURCE_ROOT; };
 		655E14DF10CE0B8000D8E6D1 /* NSValue+GHValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+GHValueFormatter.h"; path = "../../tools/libGHUnitIPhone3_0-0/NSValue+GHValueFormatter.h"; sourceTree = SOURCE_ROOT; };
 		655E14F710CE0D7F00D8E6D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		656049F111047D0400BE761F /* NSError+SoapFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SoapFault.h"; sourceTree = "<group>"; };
+		656049F211047D0400BE761F /* NSError+SoapFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+SoapFault.m"; sourceTree = "<group>"; };
 		6568477910D669080031C348 /* TextNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNodeTests.m; sourceTree = "<group>"; };
 		6568478B10D66A6D0031C348 /* XmlNamespaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNamespaceTests.m; sourceTree = "<group>"; };
 		65894D1C10D515F500AF89C0 /* TextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNode.h; sourceTree = "<group>"; };
 		65894D1D10D515F500AF89C0 /* TextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNode.m; sourceTree = "<group>"; };
 		65894D3010D51A8D00AF89C0 /* XmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlNode.h; sourceTree = "<group>"; };
 		65894D3110D51A8D00AF89C0 /* XmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNode.m; sourceTree = "<group>"; };
-		659F700610F7024600822900 /* readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.markdown; sourceTree = "<group>"; };
+		659F700610F7024600822900 /* ReadMe.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.markdown; sourceTree = "<group>"; };
 		65B947DA10CE214E00F7B4D4 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = "/Users/derek/tools/OCMock 1.55/OCMock.framework"; sourceTree = "<absolute>"; };
 		65BB81A910CC82D900959C05 /* UrlConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlConnection.h; sourceTree = "<group>"; };
 		65BB81AA10CC82D900959C05 /* UrlConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlConnection.m; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 		65C4F72010C8BA5F009DB40E /* NSObject+SoapTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SoapTemplates.h"; sourceTree = "<group>"; };
 		65C4F72110C8BA5F009DB40E /* NSObject+SoapTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SoapTemplates.m"; sourceTree = "<group>"; };
 		65C4F82D10C8DEC1009DB40E /* Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Security.m; sourceTree = "<group>"; };
+		65CA5B82110566ED00BAB73A /* License.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.markdown; sourceTree = "<group>"; };
 		65D0922D10B92B2E0061CC61 /* XmlDocumentParserDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlDocumentParserDelegateTests.m; sourceTree = "<group>"; };
 		65D0951510BA435A0061CC61 /* dXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dXml.h; sourceTree = "<group>"; };
 		65D4AA4510D20FA7003E356D /* docset.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = docset.plist; sourceTree = "<group>"; };
@@ -324,8 +333,8 @@
 		0867D691FE84028FC02AAC07 /* dXml */ = {
 			isa = PBXGroup;
 			children = (
-				659F700610F7024600822900 /* readme.markdown */,
-				654EE4AD10FB5CF60023F57D /* changeLog.markdown */,
+				659F700610F7024600822900 /* ReadMe.markdown */,
+				654EE4AD10FB5CF60023F57D /* ChangeLog.markdown */,
 				08FB77AEFE84172EC02AAC07 /* code */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -370,6 +379,7 @@
 			children = (
 				65D4AA4510D20FA7003E356D /* docset.plist */,
 				AA747D9E0F9514B9006C5449 /* dXml_Prefix.pch */,
+				65CA5B82110566ED00BAB73A /* License.markdown */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -465,6 +475,8 @@
 				65320BAE10BCF0230056BDDF /* XmlDocumentParserDelegate.m */,
 				65DAB53410B179CE00207E87 /* XmlSubtreeParserDelegate.h */,
 				65DAB53510B179CE00207E87 /* XmlSubtreeParserDelegate.m */,
+				656049F111047D0400BE761F /* NSError+SoapFault.h */,
+				656049F211047D0400BE761F /* NSError+SoapFault.m */,
 			);
 			includeInIndex = 1;
 			name = impl;
@@ -541,6 +553,7 @@
 				65894D1E10D515F500AF89C0 /* TextNode.h in Headers */,
 				65894D3210D51A8D00AF89C0 /* XmlNode.h in Headers */,
 				65F07E2C10D5E6E30057AD6C /* UrlConnection+NSURLConnectionDelegate.h in Headers */,
+				656049F411047D0400BE761F /* NSError+SoapFault.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +695,7 @@
 				654EE51010FB678E0023F57D /* SoapWebServiceConnection.m in Sources */,
 				654EE51110FB678E0023F57D /* XmlParser.m in Sources */,
 				65BCF50710FC2D7400540193 /* GHUnitIPhoneTestMain.m in Sources */,
+				656049F611047D0400BE761F /* NSError+SoapFault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +734,7 @@
 				6568498310D73EB20031C348 /* SoapWebServiceConnection.m in Sources */,
 				6568498410D73EB30031C348 /* XmlDocument.m in Sources */,
 				6568498510D73EB40031C348 /* XmlSubtreeParserDelegate.m in Sources */,
+				656049F311047D0400BE761F /* NSError+SoapFault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +759,7 @@
 				65894D3310D51A8D00AF89C0 /* XmlNode.m in Sources */,
 				65F07E2D10D5E6E30057AD6C /* UrlConnection+NSURLConnectionDelegate.m in Sources */,
 				65F07E5010D5E7AE0057AD6C /* DMNode.m in Sources */,
+				656049F511047D0400BE761F /* NSError+SoapFault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +794,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Debug;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/dXml.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -800,6 +817,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Release;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = "$(CONFIGURATION)";
@@ -822,6 +840,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Debug;
 				CURRENT_PROJECT_VERSION = 0.0.3;
 				DEPLOYMENT_LOCATION = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -851,6 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUILD_STYLE = Release;
 				CURRENT_PROJECT_VERSION = 0.0.3;
 				DEPLOYMENT_LOCATION = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
@@ -873,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_STYLE = Debug;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -906,6 +927,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_STYLE = Release;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -939,6 +961,7 @@
 		656847BF10D7000B0031C348 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_STYLE = Debug;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -949,6 +972,7 @@
 		656847C010D7000B0031C348 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_STYLE = Release;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -960,6 +984,7 @@
 		659F701510F7038600822900 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_STYLE = Debug;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -970,6 +995,7 @@
 		659F701610F7038600822900 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_STYLE = Release;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -982,6 +1008,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_STYLE = Debug;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
@@ -1017,6 +1044,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_STYLE = Release;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = YES;

@@ -105,8 +105,8 @@
 			NSString *message = [fault xmlNodeWithName:@"faultstring"].value;
 			NSString *code = [fault xmlNodeWithName:@"faultcode"].value;
 			NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-			[dic setValue:code forKey:@"faultCode"];
-			[dic setValue:message forKey:@"faultMessage"];
+			[dic setValue:code forKey:SOAP_FAULT_CODE_KEY];
+			[dic setValue:message forKey:SOAP_FAULT_MESSAGE_KEY];
 			*aErrorVar = [NSError errorWithDomain:SOAP_WEB_SERVICE_CONNECTION_DOMAIN code:SoapWebServiceConnectionSoapFault userInfo:dic];
 		}
 		return nil;
