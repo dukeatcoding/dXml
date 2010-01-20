@@ -11,13 +11,13 @@
 #import "GHUnit.h"
 #import "dXml.h"
 
-@interface XmlDocumentParserDelegateTests : GHTestCase {
+@interface DCXmlDocumentParserDelegateTests : GHTestCase {
 	@private
 }
 
 @end
 
-@implementation XmlDocumentParserDelegateTests
+@implementation DCXmlDocumentParserDelegateTests
 
 - (void) testDidStartElementCreatesDocument {
 	DCXmlDocumentParserDelegate *delegate = [[[DCXmlDocumentParserDelegate alloc]init]autorelease];

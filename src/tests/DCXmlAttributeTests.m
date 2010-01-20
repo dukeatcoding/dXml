@@ -10,7 +10,7 @@
 #import "DCXmlAttribute.h"
 #import "dXml.h"
 
-@interface XmlAttributeTests : GHTestCase {
+@interface DCXmlAttributeTests : GHTestCase {
 	@private
 	NSMutableString * xml;
 	DCXmlAttribute * attr;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation XmlAttributeTests
+@implementation DCXmlAttributeTests
 
 - (void) setUp {
 	[super setUp];

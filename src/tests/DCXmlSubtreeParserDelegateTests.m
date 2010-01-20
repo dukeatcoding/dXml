@@ -12,14 +12,14 @@
 #import "dXml.h"
 #import "DCTextNode.h"
 
-@interface XmlSubtreeParserDelegateTests : GHTestCase {
+@interface DCXmlSubtreeParserDelegateTests : GHTestCase {
 	@private
 	DCXmlSubtreeParserDelegate *delegate;
 }
 
 @end
 
-@implementation XmlSubtreeParserDelegateTests
+@implementation DCXmlSubtreeParserDelegateTests
 
 - (void) setUp {
 	delegate = [[DCXmlSubtreeParserDelegate alloc] init];

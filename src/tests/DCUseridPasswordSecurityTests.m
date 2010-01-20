@@ -13,12 +13,12 @@
 #import "NSObject+SoapTemplates.h"
 #import "dXml.h"
 
-@interface UseridPasswordSecurityTests : GHTestCase
+@interface DCUseridPasswordSecurityTests : GHTestCase
 {}
 
 @end
 
-@implementation UseridPasswordSecurityTests
+@implementation DCUseridPasswordSecurityTests
 
 - (void) testDocumentIsModified {
 	DCUseridPasswordSecurity *security = [[[DCUseridPasswordSecurity alloc] initWithUserid: @"userid" password: @"password"] autorelease];

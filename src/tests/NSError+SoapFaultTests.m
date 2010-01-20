@@ -7,7 +7,7 @@
 //
 #import "NSError+SoapFault.h"
 #import "DCXmlNode.h"
-#import "XmlDocument.h"
+#import "DCXmlDocument.h"
 #import "GHUnit.h"
 
 @interface NSError_SoapFaultTests : GHTestCase {

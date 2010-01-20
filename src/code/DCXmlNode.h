@@ -13,7 +13,7 @@
 /**
  * DCXmlNode is the main class used to represent nodes in the Document Model (DM) tree.
  * The DCXmlParser and it's two delegates (DCXmlSubtreeParserDelegate and DCXmlDocumentParserDelegate)
- * will generate the whole DM using instances of this class and the DCTextNode class. The bulk of the functionality of the 
+ * will generate the whole DM using instances of this class and the DCTextNode class. The bulk of the functionality of the
  * api with regards to the document model is embedded in this class.
  * <p>
  * DCXmlNodes contain all the data required to represent a xml element in the object graph:
@@ -307,9 +307,16 @@
 - (NSString *) asPrettyXmlString;
 /* @}*/
 
+/** \name XPath */
 
--(DCXmlNode *) xmlNodeWithXPath:(NSString *) aXpath;
+/**
+ * Returns the DCXmlNode specified by the supplied Xpath. If there is no node at any point in the xpath a nil is returned.
+ */
+- (DCXmlNode *) xmlNodeFromXPath:(NSString *)aXpath;
 
--(NSString *) valueWithXPath:(NSString *) aXpath;
+/**
+ * Returns NSString specified by the supplied Xpath. If there is no node at any point in the xpath, or the end of the xpath is not a DCTextNode, then a nil is returned.
+ */
+- (NSString *) valueFromXPath:(NSString *)aXpath;
 
 @end

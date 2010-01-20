@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XmlParser.h"
+#import "DCXmlParser.h"
 #import "GHUnit.h"
-#import "XmlDocument.h"
+#import "DCXmlDocument.h"
 #import "dXml.h"
 
-@interface XmlParserTests:GHTestCase {
+@interface DCXmlParserTests:GHTestCase {
 }
 - (void) runXmlDocumentTest: (NSString *) expectedXml;
 - (void) runXmlSubtreeTest: (NSString *) expectedXml;
 @end
 
-@implementation XmlParserTests
+@implementation DCXmlParserTests
 
 - (void) testDocumentMinimal {
 	[self runXmlDocumentTest: @"<?xml version=\"1.0\" encoding=\"UTF-8\"?><abc />"];
@@ -54,9 +54,9 @@
 
 - (void) testDocumentCreatesErrorWhenBlankXml {
 	NSString *corruptXml = @"";
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: corruptXml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: corruptXml] autorelease];
 	NSError *error = nil;
-	XmlDocument *root = [parser parse:&error];
+	DCXmlDocument *root = [parser parse:&error];
 	GHAssertNotNil(error, @"Error not returned.");
 	GHAssertNil(root, @"Blank xml should not have passed.");
 	GHAssertEquals(error.code, 5, @"Error code does not match");
@@ -65,16 +65,16 @@
 
 - (void) testDocumentIgnoresErrorWhenBlankXmlAndErrorNull {
 	NSString *corruptXml = @"";
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: corruptXml] autorelease];
-	XmlDocument *root = [parser parse:NULL];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: corruptXml] autorelease];
+	DCXmlDocument *root = [parser parse:NULL];
 	GHAssertNil(root, @"Blank xml should not have passed.");
 }
 
 - (void) testSubtreeCreatesErrorOnInvalidDefaultNamespace {
 	NSString *corruptXml = @"<abc xmlns=\"default\" />";
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: corruptXml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: corruptXml] autorelease];
 	NSError *error = nil;
-	XmlNode *root = [parser parseSubtree:&error];
+	DCXmlNode *root = [parser parseSubtree:&error];
 	GHAssertNotNil(error, @"Error not returned.");
 	GHAssertNil(root, @"Blank xml should not have passed.");
 	GHAssertEquals(error.code, 100, @"Error code does not match");
@@ -83,9 +83,9 @@
 
 - (void) testSubtreeWithCorruptNamespace {
 	NSString *corruptXml = @"<x:abc xmlns:x=\"http://noEndingQuote  />";
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: corruptXml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: corruptXml] autorelease];
 	NSError *error = nil;
-	XmlNode *root = [parser parseSubtree:&error];
+	DCXmlNode *root = [parser parseSubtree:&error];
 	GHAssertNotNil(error, @"Error not returned.");
 	GHAssertNil(root, @"Blank xml should not have passed.");
 	GHAssertEquals(error.code, 40, @"Error code does not match");
@@ -101,9 +101,9 @@
 						 @"\n\t\t</m:GetLastTradePrice>"
 						 @"\n\t</soap:body>"
 						 @"\n</soap:envelope>";
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: xml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: xml] autorelease];
 	NSError *error = nil;
-	XmlDocument *xmlDoc = [parser parse:&error];
+	DCXmlDocument *xmlDoc = [parser parse:&error];
 	GHAssertNil(error, @"Error object not nil");
 	GHAssertNotNil(xmlDoc, @"Nil returned when XmlDocument * expected.");
 
@@ -121,9 +121,9 @@
 						 @"</ghi>"
 						 @"</d:def>"
 						 @"</a:abc>";
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: xml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: xml] autorelease];
 	NSError *error = nil;
-	XmlDocument *xmlDoc = [parser parse:&error];
+	DCXmlDocument *xmlDoc = [parser parse:&error];
 	GHAssertNil(error, @"Error not nil");
 	NSString *result = [xmlDoc asXmlString];
 	DHC_LOG(@"Expected %@", xml);
@@ -132,19 +132,19 @@
 }
 
 - (void) testStaticCreationWithXml {
-	XmlParser *parser = [XmlParser parserWithXml: nil];
+	DCXmlParser *parser = [DCXmlParser parserWithXml: nil];
 	GHAssertNotNil(parser, @"Parser not created");
 }
 
 - (void) testStaticCreationWithData {
-	XmlParser *parser = [XmlParser parserWithData: nil];
+	DCXmlParser *parser = [DCXmlParser parserWithData: nil];
 	GHAssertNotNil(parser, @"Parser not created");
 }
 
 - (void) testStaticCreationWithUrl {
 	//Need a valid url with this test or it leaks memory.
 	NSURL *url = [NSURL URLWithString: @"file:///."];
-	XmlParser *parser = [XmlParser parserWithUrl: url];
+	DCXmlParser *parser = [DCXmlParser parserWithUrl: url];
 	GHAssertNotNil(parser, @"Parser not created");
 }
 
@@ -152,9 +152,9 @@
 // ***** HELPERS ******
 
 - (void) runXmlDocumentTest: (NSString *) expectedXml {
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: expectedXml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: expectedXml] autorelease];
 	NSError *error = nil;
-	XmlDocument *xmlDoc = [parser parse:&error];
+	DCXmlDocument *xmlDoc = [parser parse:&error];
 	GHAssertNil(error, @"Error not nil");
 	GHAssertNotNil(xmlDoc, @"Nil returned when XmlDocument * expected.");
 	NSString *resultXml = [xmlDoc asXmlString];
@@ -162,9 +162,9 @@
 }
 
 - (void) runXmlSubtreeTest: (NSString *) expectedXml {
-	XmlParser *parser = [[[XmlParser alloc] initWithXml: expectedXml] autorelease];
+	DCXmlParser *parser = [[[DCXmlParser alloc] initWithXml: expectedXml] autorelease];
 	NSError *error = nil;
-	XmlNode *xmlDoc = [parser parseSubtree:&error];
+	DCXmlNode *xmlDoc = [parser parseSubtree:&error];
 	GHAssertNil(error, @"Error not nil");
 	GHAssertNotNil(xmlDoc, @"Nil returned when DCXmlNode * expected.");
 	NSString *resultXml = [xmlDoc asXmlString];

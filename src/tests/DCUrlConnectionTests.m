@@ -8,12 +8,12 @@
 #import "GHUnit.h"
 #import "DCUrlConnection.h"
 
-@interface UrlConnectionTests : GHTestCase
+@interface DCUrlConnectionTests : GHTestCase
 {
 }
 @end
 
-@implementation UrlConnectionTests
+@implementation DCUrlConnectionTests
 
 - (void) testInitWithUrl {
 	DCUrlConnection *connection = [[[DCUrlConnection alloc] initWithUrl: @"abc"] autorelease];

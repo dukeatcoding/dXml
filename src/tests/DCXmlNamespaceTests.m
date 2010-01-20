@@ -9,14 +9,14 @@
 #import "GHUnit.h"
 #import "DCXmlNamespace.h"
 
-@interface XmlNamespaceTests : GHTestCase
+@interface DCXmlNamespaceTests : GHTestCase
 {
 }
 
 @end
 
 
-@implementation XmlNamespaceTests
+@implementation DCXmlNamespaceTests
 
 -(void) testConstructor {
 	DCXmlNamespace * namespace = [[[DCXmlNamespace alloc] initWithUrl:@"url" prefix:@"prefix"] autorelease];

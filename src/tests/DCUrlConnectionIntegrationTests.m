@@ -10,11 +10,11 @@
 #import "IntegrationTestDefaults.h"
 #import "dXml.h"
 
-@interface UrlConnectionIntegrationTests:GHTestCase {
+@interface DCUrlConnectionIntegrationTests:GHTestCase {
 }
 @end
 
-@implementation UrlConnectionIntegrationTests
+@implementation DCUrlConnectionIntegrationTests
 
 - (void) tearDown {
 	DHC_LOG(@"TearDown executing");

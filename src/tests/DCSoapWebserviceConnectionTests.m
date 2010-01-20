@@ -10,12 +10,12 @@
 #import "GHUnit.h"
 #import "DCSoapWebServiceConnection.h"
 
-@interface SoapWebserviceConnectionTests : GHTestCase
+@interface DCSoapWebserviceConnectionTests : GHTestCase
 {
 }
 @end
 
-@implementation SoapWebserviceConnectionTests
+@implementation DCSoapWebserviceConnectionTests
 
 - (void) testStaticCreationWithUrl {
 	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: @"url"];

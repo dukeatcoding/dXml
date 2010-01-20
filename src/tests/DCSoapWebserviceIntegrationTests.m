@@ -12,14 +12,14 @@
 #import "XmlDocument.h"
 #import "IntegrationTestDefaults.h"
 
-@interface SoapWebserviceIntegrationTests:GHTestCase
+@interface DCSoapWebserviceIntegrationTests:GHTestCase
 {
 }
 - (DCXmlNode *) createBalancePayload;
 - (void) assertBalanceResponse: (DCWebServiceResponse *) response;
 @end
 
-@implementation SoapWebserviceIntegrationTests
+@implementation DCSoapWebserviceIntegrationTests
 
 - (void) testMsgUsingXmlString {
 	NSString *xml = @"<dhc:balance xmlns:dhc=\"" MODEL_SCHEMA "\">"

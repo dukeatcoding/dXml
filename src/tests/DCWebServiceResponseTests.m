@@ -13,13 +13,13 @@
 #import "NSObject+SoapTemplates.h"
 #import "dXml.h"
 
-@interface WebServiceResponseTests : GHTestCase {
+@interface DCWebServiceResponseTests : GHTestCase {
 }
 - (DCXmlDocument *) soapResponseGraph;
 
 @end
 
-@implementation WebServiceResponseTests
+@implementation DCWebServiceResponseTests
 
 - (void) testResponseIsStoredAndReturned {
 	DCXmlDocument * doc = [[[DCXmlDocument alloc] initWithName:@"Envelope"] autorelease];

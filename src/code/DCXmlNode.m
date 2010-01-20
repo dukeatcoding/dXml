@@ -327,11 +327,11 @@
 	return [nodesInOrder count];
 }
 
--(DCXmlNode *) xmlNodeWithXPath:(NSString *) aXpath{
+-(DCXmlNode *) xmlNodeFromXPath:(NSString *) aXpath{
 	return nil;
 }
 
--(NSString *) valueWithXPath:(NSString *) aXpath{
+-(NSString *) valueFromXPath:(NSString *) aXpath{
 	return nil;
 }
 

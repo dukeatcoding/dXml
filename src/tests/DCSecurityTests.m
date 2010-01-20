@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "GHUnit.h"
-#import "XmlDocument.h"
+#import "DCXmlDocument.h"
 #import "DCSecurity.h"
 #import "DCNoSecurity.h"
 #import "DCUseridPasswordSecurity.h"
 
-@interface SecurityTests : GHTestCase
+@interface DCSecurityTests : GHTestCase
 {}
 
 @end
 
-@implementation SecurityTests
+@implementation DCSecurityTests
 
 - (void) testCreatesNoSecurity {
 	DCSecurity *security= [DCSecurity createSecurityWithUserid: @"userid" password: @"password"];

@@ -10,13 +10,13 @@
 #import <OCMock/OCMock.h>
 #import "dXml.h"
 
-@interface UrlConnection_NSURLConnectionDelegateTests : GHTestCase
+@interface DCUrlConnection_NSURLConnectionDelegateTests : GHTestCase
 {
 }
 
 @end
 
-@implementation UrlConnection_NSURLConnectionDelegateTests
+@implementation DCUrlConnection_NSURLConnectionDelegateTests
 
 - (void) testRejectsSelfSignedCertificates {
 	DCUrlConnection *conn = [DCUrlConnection createWithUrl: @"abc"];
