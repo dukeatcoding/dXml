@@ -9,8 +9,9 @@
 #import "dXml.h"
 #import "GHUnit.h"
 #import "DCSoapWebServiceConnection.h"
-#import "XmlDocument.h"
+#import "DCXmlDocument.h"
 #import "IntegrationTestDefaults.h"
+#import "NSError+SoapFault.h"
 
 @interface DCSoapWebserviceIntegrationTests:GHTestCase
 {
@@ -64,8 +65,8 @@
 
 	GHAssertNotNil(error, @"Nil error returned");
 	GHAssertNil(response, @"Response returned when it should not be.");
-	GHAssertEquals(error.code, SoapWebServiceConnectionSoapFault, @"Incorrect error code");
-	GHAssertEqualStrings(error.domain, SOAP_WEB_SERVICE_CONNECTION_DOMAIN, @"Incorrect domain returned");
+	GHAssertEquals(error.code, NSErrorSoapFault, @"Incorrect error code");
+	GHAssertEqualStrings(error.domain, NSERROR_SOAP_FAULT_DOMAIN, @"Incorrect domain returned");
 	NSDictionary *userInfo = error.userInfo;
 	GHAssertEqualStrings([userInfo valueForKey:@"faultCode"], @"ns2:Client", @"Incorrect fault code returned");
 	GHAssertEqualStrings([userInfo valueForKey:@"faultMessage"], @"Cannot find dispatch method for {http://www.dhcbank.com/banking/schema}AccountBalance", @"Incorrect fault message returned");
@@ -80,8 +81,8 @@
 
 	GHAssertNotNil(error, @"Nil error returned");
 	GHAssertNil(response, @"Response returned when it should not be.");
-	GHAssertEquals(error.code, SoapWebServiceConnectionSoapFault, @"Incorrect error code");
-	GHAssertEqualStrings(error.domain, SOAP_WEB_SERVICE_CONNECTION_DOMAIN, @"Incorrect domain returned");
+	GHAssertEquals(error.code, NSErrorSoapFault, @"Incorrect error code");
+	GHAssertEqualStrings(error.domain, NSERROR_SOAP_FAULT_DOMAIN, @"Incorrect domain returned");
 	NSDictionary *userInfo = error.userInfo;
 	GHAssertEqualStrings([userInfo valueForKey:@"faultCode"], @"ns2:Server", @"Incorrect fault code returned");
 	GHAssertEqualStrings([userInfo valueForKey:@"faultMessage"], @"No account number passed to service.", @"Incorrect fault message returned");

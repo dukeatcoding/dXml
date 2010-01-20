@@ -6,7 +6,7 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "UrlConnection+NSURLConnectionDelegate.h"
+#import "DCUrlConnection+NSURLConnectionDelegate.h"
 #import "dXml.h"
 
 @implementation DCUrlConnection (NSURLConnectionDelegate)
