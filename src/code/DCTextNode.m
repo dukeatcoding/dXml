@@ -1,18 +1,18 @@
 //
-//  TextNode.m
+//  DCTextNode.m
 //  dXml
 //
 //  Created by Derek Clarkson on 13/12/09.
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "TextNode.h"
+#import "DCTextNode.h"
 
 
-@implementation TextNode
+@implementation DCTextNode
 @synthesize value;
 
--(TextNode *) initWithText:(NSString *) text {
+-(DCTextNode *) initWithText:(NSString *) text {
 	self = [super init];
 	if (self) {
 		self.value = text;

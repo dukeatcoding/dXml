@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GHUnit.h"
-#import "XmlDocument.h"
-#import "UseridPasswordSecurity.h"
+#import "DCXmlDocument.h"
+#import "DCUseridPasswordSecurity.h"
 #import "NSObject+SoapTemplates.h"
 #import "dXml.h"
 
@@ -21,22 +21,22 @@
 @implementation UseridPasswordSecurityTests
 
 - (void) testDocumentIsModified {
-	UseridPasswordSecurity *security = [[[UseridPasswordSecurity alloc] initWithUserid: @"userid" password: @"password"] autorelease];
-	XmlDocument *document = [self createBasicSoapDM];
+	DCUseridPasswordSecurity *security = [[[DCUseridPasswordSecurity alloc] initWithUserid: @"userid" password: @"password"] autorelease];
+	DCXmlDocument *document = [self createBasicSoapDM];
 	
 	[security secureSoapMessage: document];
 
 	DHC_LOG(@"Built Xml:\n%@", [document asPrettyXmlString]);
 	
-	XmlNode *headerElement = [document xmlNodeWithName: @"Header"];
-	XmlNode *securityElement = [headerElement xmlNodeWithName: @"Security"];
+	DCXmlNode *headerElement = [document xmlNodeWithName: @"Header"];
+	DCXmlNode *securityElement = [headerElement xmlNodeWithName: @"Security"];
 	GHAssertNotNil(securityElement, @"No security element found");
-	XmlNode *usernameToken = [securityElement xmlNodeWithName: @"UsernameToken"];
+	DCXmlNode *usernameToken = [securityElement xmlNodeWithName: @"UsernameToken"];
 	GHAssertNotNil(usernameToken, @"No securityToken element found");
-	XmlNode *username = [usernameToken xmlNodeWithName: @"Username"];
+	DCXmlNode *username = [usernameToken xmlNodeWithName: @"Username"];
 	GHAssertNotNil(username, @"No userid element found");
 	GHAssertEqualStrings(username.value, @"userid", @"userid not set");
-	XmlNode *password = [usernameToken xmlNodeWithName: @"Password"];
+	DCXmlNode *password = [usernameToken xmlNodeWithName: @"Password"];
 	GHAssertNotNil(password, @"No password element found");
 	GHAssertEqualStrings(password.value, @"password", @"password not set");
 }

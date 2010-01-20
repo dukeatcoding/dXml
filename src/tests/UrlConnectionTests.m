@@ -6,7 +6,7 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 #import "GHUnit.h"
-#import "UrlConnection.h"
+#import "DCUrlConnection.h"
 
 @interface UrlConnectionTests : GHTestCase
 {
@@ -16,12 +16,12 @@
 @implementation UrlConnectionTests
 
 - (void) testInitWithUrl {
-	UrlConnection *connection = [[[UrlConnection alloc] initWithUrl: @"abc"] autorelease];
+	DCUrlConnection *connection = [[[DCUrlConnection alloc] initWithUrl: @"abc"] autorelease];
 	GHAssertNotNil(connection, @"Constructor returned nil object");
 }
 
 - (void) testCreateWithUrl {
-	UrlConnection *connection = [UrlConnection createWithUrl: @"abc"];
+	DCUrlConnection *connection = [DCUrlConnection createWithUrl: @"abc"];
 	GHAssertNotNil(connection, @"Create returned nil object");
 }
 

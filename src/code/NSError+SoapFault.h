@@ -7,15 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DCXmlDocument.h"
+#import "DCWebServiceResponse.h"
 
-#define SOAP_FAULT_CODE_KEY = @"faultCode";
-#define SOAP_FAULT_MESSAGE_KEY = @"faultMessage";
+/**
+ * Enum which specifies error codes.
+ */
+typedef enum {
+	NSErrorSoapFault=1
+}
+   NSErrorSoapFaultErrorCode;
+
+#define NSERROR_SOAP_FAULT_DOMAIN @"dXml:NSError(SoapFault)"
+#define SOAP_FAULT_CODE_KEY		 @"faultCode"
+#define SOAP_FAULT_MESSAGE_KEY	 @"faultMessage"
 
 /**
  * This category adds functionality to the NSError class for dealing with soap faults that have been returned as NSError instances.
  */
 
 @interface NSError (SoapFault)
+
+/** \name Soap message handling */
 
 /**
  * Returns YES if the NSError contains soap fault information.
@@ -32,9 +45,17 @@
  */
 - (NSString *) soapFaultCode;
 
+/** \name Soap fault factory methods */
 /**
- Extracts the soap fault details and stores them in the userinfo data area of the NSError.
+ * Factory method which creates a NSError containing a soap fault.
+ * \param response The full response document from a web service.
  */
-- storeSoapFault:(XmlNode *) aSoapFault;
++ (NSError *) errorWithSoapResponse:(DCWebServiceResponse *)response;
+
+/**
+ * Factory method which creates a NSError containing a soap fault.
+ * \param fault The bod content from a we service call. This is expected to be the "Fault" node of the response.
+ */
++ (NSError *) errorWithSoapFault:(DCXmlNode *)fault;
 
 @end

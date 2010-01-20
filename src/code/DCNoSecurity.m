@@ -6,12 +6,12 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "NoSecurity.h"
+#import "DCNoSecurity.h"
 #import "dXml.h"
 
-@implementation NoSecurity
+@implementation DCNoSecurity
 
--(void) secureSoapMessage:(XmlDocument *) soapMessage {
+-(void) secureSoapMessage:(DCXmlDocument *) soapMessage {
 	DHC_LOG (@"NO security - leaving soap message untouched.");
 }
 

@@ -9,7 +9,7 @@
 #import "UrlConnection+NSURLConnectionDelegate.h"
 #import "dXml.h"
 
-@implementation UrlConnection (NSURLConnectionDelegate)
+@implementation DCUrlConnection (NSURLConnectionDelegate)
 - (NSURLRequest *) connection: (NSURLConnection *) connection willSendRequest: (NSURLRequest *) request redirectResponse: (NSURLResponse *) response {
 	DHC_LOG(@"Event-willSendRequest, Url: %@", [request URL]);
 	DHC_LOG( @"Request body:\n%@", DHC_DATA_TO_STRING([request HTTPBody]) );

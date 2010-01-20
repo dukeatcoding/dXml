@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Security.h"
+#import "DCSecurity.h"
 
 /**
  * This security handler will implement a basic userid/password style security model. When asked to process a soap message, it will add ws-security xml elements to the soap messages header area and put the userid and password into those elements.
  */
-@interface UseridPasswordSecurity : NSObject <SecurityModel>{
+@interface DCUseridPasswordSecurity : NSObject <DCSecurityModel>{
 	@private
 	NSString *userid;
 	NSString *password;
@@ -21,6 +21,6 @@
 /**
  * default constructor.
  */
-- (UseridPasswordSecurity *) initWithUserid: (NSString *) aUserid password: (NSString *) aPassword;
+- (DCUseridPasswordSecurity *) initWithUserid: (NSString *) aUserid password: (NSString *) aPassword;
 
 @end

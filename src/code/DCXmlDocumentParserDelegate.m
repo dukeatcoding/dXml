@@ -6,18 +6,18 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "XmlDocumentParserDelegate.h"
+#import "DCXmlDocumentParserDelegate.h"
 #import "dXml.h"
 
-@implementation XmlDocumentParserDelegate
+@implementation DCXmlDocumentParserDelegate
 
 - (void) createNodeWithName: (NSString *) elementName {
 
 	//If this is the first time in, then we want to create a XmlDocument as a top level element
-	//instead of a XmlNode.
+	//instead of a DCXmlNode.
 	if (self.document == nil) {
 		DHC_LOG(@"self.document == nil, so creating a XmlDocument as the current document.");
-		currentNode = (XmlDocument *)[[XmlDocument alloc] initWithName: elementName];
+		currentNode = (DCXmlDocument *)[[DCXmlDocument alloc] initWithName: elementName];
 		return;
 	}
 	
@@ -25,8 +25,8 @@
 	[super createNodeWithName:elementName];
 }
 
--(XmlDocument *) document {
-	return (XmlDocument *) rootNode;
+-(DCXmlDocument *) document {
+	return (DCXmlDocument *) rootNode;
 }
 
 @end

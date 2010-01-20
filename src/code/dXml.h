@@ -7,7 +7,7 @@
 //  Created by Derek Clarkson on 23/11/09.
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
-#import "XmlNode.h"
+#import "DCXmlNode.h"
 
 #ifdef DHC_DEBUG
 
@@ -41,8 +41,8 @@
 			DHC_LOG(@"DHC_DEALLOC releasing static " # vName ": %@", dobj); \
 			break; \
 		} \
-		if ([dobj isKindOfClass: [XmlNode class]]) {	\
-			XmlNode *e = dobj; \
+		if ([dobj isKindOfClass: [DCXmlNode class]]) {	\
+			DCXmlNode *e = dobj; \
 			DHC_LOG(@"DHC_DEALLOC releasing element " # vName ": %@, rc: %i", e.name, [dobj retainCount]); \
 			break; \
 		} \

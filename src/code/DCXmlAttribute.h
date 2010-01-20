@@ -17,7 +17,7 @@
  * \endcode
  * "def" is the name, and "ghi" is the value of the attribute.
  */
-@interface XmlAttribute : NSObject {
+@interface DCXmlAttribute : NSObject {
 	@private
 	NSString *name;
 	NSString *value;
@@ -40,7 +40,7 @@
 /**
  * Default constructor. Based on the logic that all attributes must ave a name and value.
  */
--(XmlAttribute *) initWithName: (NSString *) aName value: (NSString *) aValue;
+-(DCXmlAttribute *) initWithName: (NSString *) aName value: (NSString *) aValue;
 
 /** \name Serialisation */
 

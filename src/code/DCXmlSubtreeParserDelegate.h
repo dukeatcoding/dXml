@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XmlNode.h"
+#import "DCXmlNode.h"
 
 /**
  * Main class for parsing xml streams. This class is capable of receiving and processing the incoming xml events and assembling
@@ -15,14 +15,14 @@
  * Here is an example of using this class to process a string containing xml into the document model:
  * \code
  * NSString *xml = @"&lt;xml ...&gt;";
- * XmlParser *parser = [XmlParser parserWithXml: xml];
- * XmlDocument *xmlDoc = [parser parse];
+ * DCXmlParser *parser = [DCXmlParser parserWithXml: xml];
+ * DCXmlDocument *xmlDoc = [parser parse];
  * \endcode
  */
-@interface XmlSubtreeParserDelegate : NSObject {
+@interface DCXmlSubtreeParserDelegate : NSObject {
 	@protected
-	XmlNode * currentNode;
-	XmlNode * rootNode;
+	DCXmlNode * currentNode;
+	DCXmlNode * rootNode;
 	@private
 	NSMutableDictionary * namespaceCache;
 	/**
@@ -41,7 +41,7 @@
 /**
  * Returns the root node of the result document mode.
  */
-@property (readonly, nonatomic) XmlNode * rootNode;
+@property (readonly, nonatomic) DCXmlNode * rootNode;
 
 /**
  * If an error is encountered, it will be stored in this variable and the xml processing will be stopped.
@@ -50,9 +50,9 @@
 
 /** \name Subnodes */
 /**
- * Called during the construction of the DM each time a new node is needed. The XmlDocumentParserDelegate class overrides
- * this method to create a XmlDocument for the root node.
- * \see XmlDocumentParserDelegate
+ * Called during the construction of the DM each time a new node is needed. The DCXmlDocumentParserDelegate class overrides
+ * this method to create a DCXmlDocument for the root node.
+ * \see DCXmlDocumentParserDelegate
  */
 - (void) createNodeWithName:(NSString *)aName;
 

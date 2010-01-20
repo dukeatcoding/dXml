@@ -5,13 +5,13 @@
 //  Created by Derek Clarkson on 14/12/09.
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
-#import "DMNode.h"
+#import "DCDMNode.h"
 
-@interface DMNode (x)
+@interface DCDMNode (x)
 - (void) newLineAndIndent:(NSMutableString *)xml prettyPrint:(bool)prettyPrint indentDepth:(int)indentDepth;
 @end
 
-@implementation DMNode
+@implementation DCDMNode
 
 @synthesize parentNode;
 

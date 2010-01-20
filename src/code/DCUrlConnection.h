@@ -30,7 +30,7 @@ UrlConnectionErrorCode;
  *	@"&lt;/dhc:balance&gt;"
  *	@"\n\t&lt;/soap:Body&gt;"
  *	@"\n&lt;/soap:Envelope&gt;";
- * UrlConnection *connection = [UrlConnection createWithUrl: BANKING];
+ * DCUrlConnection *connection = [DCUrlConnection createWithUrl: BANKING];
  * [connection setHeaderValue: BALANCE_ACTION forKey: @"SOAPAction"];
  * NSError *error = nil;
  * NSData *data = [connection post: request errorVar:&error];
@@ -41,7 +41,7 @@ UrlConnectionErrorCode;
  * // Otherwise process the results.
  * \endcode
  */
-@interface UrlConnection:NSObject {
+@interface DCUrlConnection:NSObject {
 	@protected
 	NSString *serverUrl;
 	NSMutableDictionary *headers;
@@ -62,7 +62,7 @@ UrlConnectionErrorCode;
 @property (nonatomic, readonly) NSString *serverUrl;
 
 /**
- * If set to true, the UrlConnection will accept self signed cerificates from the server. This is most useful when
+ * If set to true, the DCUrlConnection will accept self signed cerificates from the server. This is most useful when
  * developing code
  * as the server can be on the developer's machine. This setting allows the developer to work without having to obtain
  * formal certifcates.
@@ -79,12 +79,12 @@ UrlConnectionErrorCode;
 /**
  * Default constructor.
  */
-- (UrlConnection *) initWithUrl: (NSString *) aUrl;
+- (DCUrlConnection *) initWithUrl: (NSString *) aUrl;
 
 /**
  * Factory method which generates a autorelease instance.
  */
-+ (UrlConnection *) createWithUrl: (NSString *) aUrl;
++ (DCUrlConnection *) createWithUrl: (NSString *) aUrl;
 
 /** \name Communicaton */
 
@@ -94,7 +94,6 @@ UrlConnectionErrorCode;
  * \param bodyContent a string containing the message to send via http post.
  * \param aErrorVar reference to an error variable that will be populated if an error occurs. This must be passed as `&aErrorVar`. In other words, the address of the error variable.
  * \see NSURLConnectionDelegate for details of how the response is assembled.
- * \throws UrlConnectioNException if an error occurs.
  */
 - (NSData *) post: (NSString *) bodyContent errorVar:(NSError **) aErrorVar;
 

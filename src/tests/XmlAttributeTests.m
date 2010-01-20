@@ -7,13 +7,13 @@
 //
 
 #import "GHUnit.h"
-#import "XmlAttribute.h"
+#import "DCXmlAttribute.h"
 #import "dXml.h"
 
 @interface XmlAttributeTests : GHTestCase {
 	@private
 	NSMutableString * xml;
-	XmlAttribute * attr;
+	DCXmlAttribute * attr;
 }
 
 @end
@@ -32,13 +32,13 @@
 }
 
 - (void) testAppendedValue {
-	attr = [[XmlAttribute alloc] initWithName: @"abc" value: @"def"];
+	attr = [[DCXmlAttribute alloc] initWithName: @"abc" value: @"def"];
 	[attr appendToXmlString: xml];
 	GHAssertEqualStrings(xml, @" abc=\"def\"", @"Attribute not formatted correctly.");
 }
 
 - (void) testChangedValueIsReturned {
-	attr = [[XmlAttribute alloc] initWithName: @"abc" value: @"def"];
+	attr = [[DCXmlAttribute alloc] initWithName: @"abc" value: @"def"];
 	[attr setValue: @"ghi"];
 	[attr appendToXmlString: xml];
 	GHAssertEqualStrings(xml, @" abc=\"ghi\"", @"Attribute not formatted correctly.");

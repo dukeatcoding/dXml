@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "dXml.h"
 #import "GHUnit.h"
-#import "SoapWebServiceConnection.h"
+#import "DCSoapWebServiceConnection.h"
 
 @interface SoapWebserviceConnectionTests : GHTestCase
 {
@@ -18,12 +18,12 @@
 @implementation SoapWebserviceConnectionTests
 
 - (void) testStaticCreationWithUrl {
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: @"url"];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: @"url"];
 	GHAssertEqualStrings(service.serverUrl, @"url", @"Url not set.");
 }
 
 - (void) testStaticCreationWithUrlAndActon {
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: @"url" soapAction: @"action"];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: @"url" soapAction: @"action"];
 	GHAssertEqualStrings(service.serverUrl, @"url", @"Url not set.");
 	GHAssertEqualStrings(service.soapAction, @"action", @"Operation not set.");
 }
@@ -33,9 +33,9 @@
 	// This will trigger a parse exception.
 	NSString *xml = @"";
 	
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: nil soapAction: nil];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: nil soapAction: nil];
 	NSError	* error;
-	WebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
 	
 	GHAssertNotNil(error, @"Expected error to be present");
 	GHAssertNil(response, @"Expected response to be nil");
@@ -49,9 +49,9 @@
 	// This will trigger a parse exception.
 	NSString *xml = @"";
 	
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: nil soapAction: nil];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: nil soapAction: nil];
 	NSError * error = NULL;
-	WebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
 	
 	GHAssertNil(response, @"Expected response to be nil");
 }

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XmlNode.h"
+#import "DCXmlNode.h"
 
 #define XML_HEADER @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 
@@ -17,7 +17,7 @@
  * node will automatically insert the standard xml version header at the top of the document
  * produced.
  */
-@interface XmlDocument : XmlNode {
+@interface DCXmlDocument : DCXmlNode {
 	@private
 }
 

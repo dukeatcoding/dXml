@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UrlConnection.h"
+#import "DCUrlConnection.h"
 
 /**
-  * This category adds further functionality to a UrlConnection. The main purpose is to break the code base for
-  * UrlConnection up into managable units. In this case we have a collection of delegate methods from NSURLConnection
+  * This category adds further functionality to a DCUrlConnection. The main purpose is to break the code base for
+  * DCUrlConnection up into managable units. In this case we have a collection of delegate methods from NSURLConnection
   * which handle the responses from a url.
   * 
   * There is not a lot of code
@@ -19,7 +19,7 @@
   * within an xml tag. And
   * connection:canAuthenticateAgainstProtectionSpace: which handles certificates and ssl security.
   */
-@interface UrlConnection (NSURLConnectionDelegate)
+@interface DCUrlConnection (NSURLConnectionDelegate)
 
 /** \name Delegate methods 
  * These methods are called b NSURLConnection during the interaction with a url.

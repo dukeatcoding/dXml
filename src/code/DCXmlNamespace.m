@@ -6,16 +6,16 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "XmlNamespace.h"
+#import "DCXmlNamespace.h"
 #import "dXml.h"
 
 
-@implementation XmlNamespace
+@implementation DCXmlNamespace
 
 @synthesize url;
 @synthesize prefix;
 
--(XmlNamespace *) initWithUrl: (NSString *) aUrl prefix: (NSString *) aPrefix {
+-(DCXmlNamespace *) initWithUrl: (NSString *) aUrl prefix: (NSString *) aPrefix {
 	self = [super init];
 	if (self) {
 		url = [aUrl retain];

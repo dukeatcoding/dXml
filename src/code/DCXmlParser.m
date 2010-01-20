@@ -6,34 +6,34 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "XmlParser.h"
+#import "DCXmlParser.h"
 #import "dXml.h"
-#import "XmlNode.h"
+#import "DCXmlNode.h"
 
 //Private method category used to hide methods (almost).
-@interface XmlParser ()
--(XmlNode *) parseWithDelegate:(XmlSubtreeParserDelegate *) delegate returnNodeSelector:(SEL) message errorVar:(NSError * *) aErrorVar;
+@interface DCXmlParser ()
+-(DCXmlNode *) parseWithDelegate:(DCXmlSubtreeParserDelegate *) delegate returnNodeSelector:(SEL) message errorVar:(NSError * *) aErrorVar;
 @end
 
-@implementation XmlParser
-+ (XmlParser *) parserWithXml:(NSString *) xml {
+@implementation DCXmlParser
++ (DCXmlParser *) parserWithXml:(NSString *) xml {
 	DHC_LOG(@"Being asked to parse: %@", xml);
-	return [[[XmlParser alloc] initWithXml: xml] autorelease];
+	return [[[DCXmlParser alloc] initWithXml: xml] autorelease];
 }
 
-+ (XmlParser *) parserWithData: (NSData *) data {
-	return [[[XmlParser alloc] initWithData: data] autorelease];
++ (DCXmlParser *) parserWithData: (NSData *) data {
+	return [[[DCXmlParser alloc] initWithData: data] autorelease];
 }
 
-+ (XmlParser *) parserWithUrl: (NSURL *) url {
-	return [[[XmlParser alloc] initWithUrl: url] autorelease];
++ (DCXmlParser *) parserWithUrl: (NSURL *) url {
+	return [[[DCXmlParser alloc] initWithUrl: url] autorelease];
 }
 
-- (XmlParser *) initWithXml: (NSString *) xml {
+- (DCXmlParser *) initWithXml: (NSString *) xml {
 	return [self initWithData:DHC_STRING_TO_DATA(xml)];
 }
 
-- (XmlParser *) initWithData: (NSData *) data {
+- (DCXmlParser *) initWithData: (NSData *) data {
 	self = [super init];
 	if (self) {
 		parser = [[NSXMLParser alloc] initWithData: data];
@@ -41,7 +41,7 @@
 	return self;
 }
 
-- (XmlParser *) initWithUrl: (NSURL *) url {
+- (DCXmlParser *) initWithUrl: (NSURL *) url {
 	self = [super init];
 	if (self) {
 		parser = [[NSXMLParser alloc] initWithContentsOfURL: url];
@@ -49,19 +49,19 @@
 	return self;
 }
 
-- (XmlDocument *) parse:(NSError * *) aErrorVar {
+- (DCXmlDocument *) parse:(NSError * *) aErrorVar {
 	DHC_LOG(@"parsing a Document, error handing %@", DHC_PRETTY_BOOL(aErrorVar != NULL));
-	XmlSubtreeParserDelegate *delegate = [[[XmlDocumentParserDelegate alloc] init] autorelease];
-	return (XmlDocument *)[self parseWithDelegate:delegate returnNodeSelector:@selector(document) errorVar:aErrorVar];
+	DCXmlSubtreeParserDelegate *delegate = [[[DCXmlDocumentParserDelegate alloc] init] autorelease];
+	return (DCXmlDocument *)[self parseWithDelegate:delegate returnNodeSelector:@selector(document) errorVar:aErrorVar];
 }
 
-- (XmlNode *) parseSubtree:(NSError * *) aErrorVar {
+- (DCXmlNode *) parseSubtree:(NSError * *) aErrorVar {
 	DHC_LOG(@"parsing a Subtree, error handing %@", DHC_PRETTY_BOOL(aErrorVar != NULL));
-	XmlSubtreeParserDelegate *delegate = [[[XmlSubtreeParserDelegate alloc] init] autorelease];
+	DCXmlSubtreeParserDelegate *delegate = [[[DCXmlSubtreeParserDelegate alloc] init] autorelease];
 	return [self parseWithDelegate:delegate returnNodeSelector:@selector(rootNode) errorVar:aErrorVar];
 }
 
--(XmlNode *) parseWithDelegate:(XmlSubtreeParserDelegate *) delegate returnNodeSelector:(SEL) message errorVar:(NSError * *) aErrorVar {
+-(DCXmlNode *) parseWithDelegate:(DCXmlSubtreeParserDelegate *) delegate returnNodeSelector:(SEL) message errorVar:(NSError * *) aErrorVar {
 
 	DHC_LOG(@"Parsing, error handing %@", DHC_PRETTY_BOOL(aErrorVar != NULL));
 
@@ -86,7 +86,7 @@
 	}
 
 	DHC_LOG(@"Returning value from delegate");
-	return (XmlNode *)[delegate performSelector:message];
+	return (DCXmlNode *)[delegate performSelector:message];
 }
 
 - (void) dealloc {

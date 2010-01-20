@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "GHUnit.h"
 #import "XmlDocument.h"
-#import "Security.h"
-#import "NoSecurity.h"
-#import "UseridPasswordSecurity.h"
+#import "DCSecurity.h"
+#import "DCNoSecurity.h"
+#import "DCUseridPasswordSecurity.h"
 
 @interface SecurityTests : GHTestCase
 {}
@@ -21,15 +21,15 @@
 @implementation SecurityTests
 
 - (void) testCreatesNoSecurity {
-	Security *security= [Security createSecurityWithUserid: @"userid" password: @"password"];
+	DCSecurity *security= [DCSecurity createSecurityWithUserid: @"userid" password: @"password"];
 	id model = [security createSecurityModelOfType: NONE];
-	GHAssertTrue([model isKindOfClass:[NoSecurity class]], @"Incorrect security class returned.");
+	GHAssertTrue([model isKindOfClass:[DCNoSecurity class]], @"Incorrect security class returned.");
 }
 
 - (void) testCreatesUseridPasswordSecurity {
-	Security *security = [Security createSecurityWithUserid: @"userid" password: @"password"];
+	DCSecurity *security = [DCSecurity createSecurityWithUserid: @"userid" password: @"password"];
 	id model = [security createSecurityModelOfType: BASIC_USERID_PASSWORD];
-	GHAssertTrue([model isKindOfClass:[UseridPasswordSecurity class]], @"Incorrect security class returned.");
+	GHAssertTrue([model isKindOfClass:[DCUseridPasswordSecurity class]], @"Incorrect security class returned.");
 }
 
 @end

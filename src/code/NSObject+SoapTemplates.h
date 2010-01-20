@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XmlDocument.h"
+#import "DCXmlDocument.h"
 
 /**
   * Adds the ability to generate a Soap message template to any class. This is useful for classes wishing to generate
@@ -18,7 +18,7 @@
 /** \name Templates */
 
 /**
-  * Returns a XmlDocument which contains the basic soap message elements. Essentially this creates the Evelope, Header
+  * Returns a DCXmlDocument which contains the basic soap message elements. Essentially this creates the Evelope, Header
   * and Body elements. Here is a copy of the
   * output from this method
   * \code
@@ -31,10 +31,10 @@
   * &lt;/soapenv:Envelope&gt;
   * \endcode
   */
--(XmlDocument *) createBasicSoapDM;
+-(DCXmlDocument *) createBasicSoapDM;
 
 /**
- * Returns a XmlDocument which contains a standard soap fault structure. Here is a copy of the
+ * Returns a DCXmlDocument which contains a standard soap fault structure. Here is a copy of the
  * output from this method
  * \code
  * &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -46,5 +46,5 @@
  * &lt;/soapenv:Envelope&gt;
  * \endcode
  */
--(XmlDocument *) createSoapFaultDM;
+-(DCXmlDocument *) createSoapFaultDM;
 @end

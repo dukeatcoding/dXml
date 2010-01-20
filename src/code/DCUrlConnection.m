@@ -6,23 +6,23 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "UrlConnection.h"
+#import "DCUrlConnection.h"
 #import "dXml.h"
 
 //Private methods.
-@interface UrlConnection ()
+@interface DCUrlConnection ()
 - (NSMutableURLRequest *) createRequestWithMsg: (NSString *) aMsg;
 - (void) addHeadersToRequest: (NSURLRequest *) theRequest;
 - (void) executeEventsUntilAllDataReceived;
 @end
 
-@implementation UrlConnection
+@implementation DCUrlConnection
 
 @synthesize allowSelfSignedCertificates;
 @synthesize storeCredentials;
 @synthesize serverUrl;
 
-- (UrlConnection *) initWithUrl: (NSString *) aUrl {
+- (DCUrlConnection *) initWithUrl: (NSString *) aUrl {
 	self = [super init];
 	if (self) {
 		serverUrl = [aUrl retain];
@@ -33,8 +33,8 @@
 	return self;
 }
 
-+ (UrlConnection *) createWithUrl: (NSString *) aUrl {
-	return [[[UrlConnection alloc] initWithUrl: aUrl] autorelease];
++ (DCUrlConnection *) createWithUrl: (NSString *) aUrl {
+	return [[[DCUrlConnection alloc] initWithUrl: aUrl] autorelease];
 }
 
 -(void) setUsername: (NSString *) aUsername password:(NSString *) aPassword {

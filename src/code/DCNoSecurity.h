@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Security.h"
+#import "DCSecurity.h"
 
 /**
  * For the conveniance of calling code, this is a security handler that does nothing.
  * \see Security
  */
-@interface NoSecurity : NSObject <SecurityModel>{
+@interface DCNoSecurity : NSObject <DCSecurityModel>{
 }
 
 @end

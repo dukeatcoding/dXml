@@ -6,7 +6,7 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 #import "GHUnit.h"
-#import "UrlConnection.h"
+#import "DCUrlConnection.h"
 #import "IntegrationTestDefaults.h"
 #import "dXml.h"
 
@@ -24,7 +24,7 @@
 - (void) testErrorHandling {
 	NSString *request = @"";
 
-	UrlConnection *connection = [UrlConnection createWithUrl: INVALID_SERVER];
+	DCUrlConnection *connection = [DCUrlConnection createWithUrl: INVALID_SERVER];
 	[connection setHeaderValue: BALANCE_ACTION forKey: @"SOAPAction"];
 	NSError *error = nil;
 	NSData *data = [connection post: request errorVar:&error];
@@ -37,7 +37,7 @@
 - (void) testErrorHandlingIgnoresErrors {
 	NSString *request = @"";
 	
-	UrlConnection *connection = [UrlConnection createWithUrl: INVALID_SERVER];
+	DCUrlConnection *connection = [DCUrlConnection createWithUrl: INVALID_SERVER];
 	[connection setHeaderValue: BALANCE_ACTION forKey: @"SOAPAction"];
 	NSData *data = [connection post: request errorVar:NULL];
 	GHAssertNil(data, @"Data should not have been returned");
@@ -62,7 +62,7 @@
 		@"</S:Body>"
 		@"</S:Envelope>";
 
-	UrlConnection *connection = [UrlConnection createWithUrl: BANKING];
+	DCUrlConnection *connection = [DCUrlConnection createWithUrl: BANKING];
 	[connection setHeaderValue: BALANCE_ACTION forKey: @"SOAPAction"];
 	NSError *error = nil;
 	NSData *data = [connection post: request errorVar:&error];
@@ -92,7 +92,7 @@
 						 @"</dhc:balance>"
 						 @"\n\t</soap:Body>"
 						 @"\n</soap:Envelope>";
-	UrlConnection *connection = [UrlConnection createWithUrl: BANKING_SECURE];
+	DCUrlConnection *connection = [DCUrlConnection createWithUrl: BANKING_SECURE];
 	connection.allowSelfSignedCertificates = YES;
 	[connection setHeaderValue: BALANCE_ACTION forKey: @"SOAPAction"];
 	NSError *error = nil;

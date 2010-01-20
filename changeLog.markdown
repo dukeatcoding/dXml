@@ -1,7 +1,10 @@
-# DXml v0.0.3 ()
+# DXml v0.1.0 ()
 
 * Added more defines to SoapWebServiceConnection.h to help with extracting data from responses.
 * Added a new category to NSError to manage soap fault details.
+* Added isSoapFault message to WebServiceResponse.
+* Added simple BSD license.
+* Inline with suggested coding practices on http://cocoadevcentral.com/articles/000082.php I've renamed all classes and values to have a prefix of "DC". This helps to ensure that when used with other libraries we avoid conflicting names.
 
 # dXml v0.0.2 (18 Jan 2010)
 

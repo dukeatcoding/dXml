@@ -6,12 +6,12 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "XmlDocument.h"
+#import "DCXmlDocument.h"
 
-@implementation XmlDocument
+@implementation DCXmlDocument
 
 /**
- * Overridden to add the standard XML header before calling the standard XmlNode#appendToXmlString:prettyPrint:indentDepth:
+ * Overridden to add the standard XML header before calling the standard DCXmlNode#appendToXmlString:prettyPrint:indentDepth:
  * method.
  */
 - (void) appendToXmlString: (NSMutableString *) xml prettyPrint: (bool) prettyPrint indentDepth: (int) indentDepth {

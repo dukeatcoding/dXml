@@ -166,7 +166,7 @@
 	NSError *error = nil;
 	XmlNode *xmlDoc = [parser parseSubtree:&error];
 	GHAssertNil(error, @"Error not nil");
-	GHAssertNotNil(xmlDoc, @"Nil returned when XmlNode * expected.");
+	GHAssertNotNil(xmlDoc, @"Nil returned when DCXmlNode * expected.");
 	NSString *resultXml = [xmlDoc asXmlString];
 	GHAssertEqualStrings(resultXml, DHC_TRIM(expectedXml), @"Processing XML did not result in identical xml when reconstituted.");
 }

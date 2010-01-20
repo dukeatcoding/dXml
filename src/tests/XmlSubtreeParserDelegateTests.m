@@ -6,15 +6,15 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "XmlSubtreeParserDelegate.h"
-#import "XmlNamespace.h"
+#import "DCXmlSubtreeParserDelegate.h"
+#import "DCXmlNamespace.h"
 #import "GHUnit.h"
 #import "dXml.h"
-#import "TextNode.h"
+#import "DCTextNode.h"
 
 @interface XmlSubtreeParserDelegateTests : GHTestCase {
 	@private
-	XmlSubtreeParserDelegate *delegate;
+	DCXmlSubtreeParserDelegate *delegate;
 }
 
 @end
@@ -22,7 +22,7 @@
 @implementation XmlSubtreeParserDelegateTests
 
 - (void) setUp {
-	delegate = [[XmlSubtreeParserDelegate alloc] init];
+	delegate = [[DCXmlSubtreeParserDelegate alloc] init];
 }
 
 - (void) tearDown {
@@ -36,7 +36,7 @@
 	[delegate parser: nil didStartElement: @"elementname" namespaceURI: @"namespace" qualifiedName: @"qualifiedname" attributes: nil];
 	[delegate parser: nil didEndElement: @"elementname" namespaceURI: @"namespace" qualifiedName: @"qualifiedname"];
 
-	XmlNode *element= [delegate rootNode];
+	DCXmlNode *element= [delegate rootNode];
 
 	GHAssertNotNil(element, @"element not returned.");
 	GHAssertEqualStrings([element name], @"elementname", @"Document name not what was expected.");
@@ -48,11 +48,11 @@
 	[delegate parser: nil didEndElement: @"subelementname" namespaceURI: nil qualifiedName: nil];
 	[delegate parser: nil didEndElement: @"elementname" namespaceURI: @"namespace" qualifiedName: @"qualifiedname"];
 
-	XmlNode *element  = [delegate rootNode];
+	DCXmlNode *element  = [delegate rootNode];
 
 	GHAssertNotNil(element, @"element not returned.");
 	GHAssertEqualStrings([element name], @"elementname", @"Document name not what was expected.");
-	XmlNode *subelement = [element xmlNodeWithName: @"subelementname"];
+	DCXmlNode *subelement = [element xmlNodeWithName: @"subelementname"];
 	GHAssertNotNil(subelement, @"Subelement not returned.");
 	GHAssertEqualStrings([subelement name], @"subelementname", @"Sub element name not what was expected.");
 }
@@ -62,8 +62,8 @@
 	[delegate parser: nil didStartElement: @"elementname" namespaceURI: @"uri" qualifiedName: @"prefix:elementname" attributes: nil];
 	[delegate parser: nil didEndElement: @"elementname" namespaceURI: @"uri" qualifiedName: @"prefix:elementname"];
 
-	XmlNode *element = [delegate rootNode];
-	for (XmlNamespace *namespace in[element namespaces]) {
+	DCXmlNode *element = [delegate rootNode];
+	for (DCXmlNamespace *namespace in[element namespaces]) {
 		if ([@"prefix" isEqualToString:namespace.prefix] &&[@"uri" isEqualToString:namespace.url]) {
 			//success.
 			return;
@@ -97,7 +97,7 @@
 	[delegate parser: nil foundCharacters: @"abc"];
 	[delegate parser: nil didEndElement: @"elementname" namespaceURI: nil qualifiedName: nil];
 
-	XmlNode *element = [delegate rootNode];
+	DCXmlNode *element = [delegate rootNode];
 
 	GHAssertNotNil(element, @"element not returned.");
 	GHAssertEqualStrings(element.value, @"abc", @"Value not returned correctly.");
@@ -110,7 +110,7 @@
 	[delegate parser: nil foundCharacters: @"ghi"];
 	[delegate parser: nil didEndElement: @"elementname" namespaceURI: nil qualifiedName: nil];
 
-	XmlNode *element = [delegate rootNode];
+	DCXmlNode *element = [delegate rootNode];
 
 	GHAssertNotNil(element, @"element not returned.");
 	GHAssertEqualStrings(element.value, @"abc def ghi", @"Value not returned correctly.");
@@ -128,28 +128,28 @@
 	[delegate parser: nil foundCharacters: @"lmn"];
 	[delegate parser: nil didEndElement: @"root" namespaceURI: nil qualifiedName: nil];
 
-	XmlNode *element = [delegate rootNode];
+	DCXmlNode *element = [delegate rootNode];
 
 	GHAssertNotNil(element, @"element not returned.");
 	GHAssertEquals([element countNodes], 4, @"Incorrect number of nodes.");
 
-	GHAssertTrue([[element nodeAtIndex:0] isKindOfClass:[TextNode class]], @"Incorrect class of node.");
-	GHAssertEqualStrings(((TextNode *) [element nodeAtIndex:0]).value, @"abc", @"Value not correct");
+	GHAssertTrue([[element nodeAtIndex:0] isKindOfClass:[DCTextNode class]], @"Incorrect class of node.");
+	GHAssertEqualStrings(((DCTextNode *) [element nodeAtIndex:0]).value, @"abc", @"Value not correct");
 
-	GHAssertTrue([[element nodeAtIndex:1] isKindOfClass:[XmlNode class]], @"Incorrect class of node.");
-	GHAssertEqualStrings(((XmlNode *) [element nodeAtIndex:1]).name, @"element1", @"Value not correct");
+	GHAssertTrue([[element nodeAtIndex:1] isKindOfClass:[DCXmlNode class]], @"Incorrect class of node.");
+	GHAssertEqualStrings(((DCXmlNode *) [element nodeAtIndex:1]).name, @"element1", @"Value not correct");
 
-	GHAssertTrue([[((XmlNode *)[element nodeAtIndex:1])nodeAtIndex:0] isKindOfClass:[TextNode class]], @"Incorrect class of node.");
-	GHAssertEqualStrings(((XmlNode *) [((XmlNode *)[element nodeAtIndex:1])nodeAtIndex:0]).value, @"def", @"Value not correct");
+	GHAssertTrue([[((DCXmlNode *)[element nodeAtIndex:1])nodeAtIndex:0] isKindOfClass:[DCTextNode class]], @"Incorrect class of node.");
+	GHAssertEqualStrings(((DCXmlNode *) [((DCXmlNode *)[element nodeAtIndex:1])nodeAtIndex:0]).value, @"def", @"Value not correct");
 
-	GHAssertTrue([[element nodeAtIndex:2] isKindOfClass:[XmlNode class]], @"Incorrect class of node.");
-	GHAssertEqualStrings(((XmlNode *) [element nodeAtIndex:2]).name, @"element2", @"Value not correct");
+	GHAssertTrue([[element nodeAtIndex:2] isKindOfClass:[DCXmlNode class]], @"Incorrect class of node.");
+	GHAssertEqualStrings(((DCXmlNode *) [element nodeAtIndex:2]).name, @"element2", @"Value not correct");
 
-	GHAssertTrue([[((XmlNode *)[element nodeAtIndex:2])nodeAtIndex:0] isKindOfClass:[TextNode class]], @"Incorrect class of node.");
-	GHAssertEqualStrings(((XmlNode *) [((XmlNode *)[element nodeAtIndex:2])nodeAtIndex:0]).value, @"ghi", @"Value not correct");
+	GHAssertTrue([[((DCXmlNode *)[element nodeAtIndex:2])nodeAtIndex:0] isKindOfClass:[DCTextNode class]], @"Incorrect class of node.");
+	GHAssertEqualStrings(((DCXmlNode *) [((DCXmlNode *)[element nodeAtIndex:2])nodeAtIndex:0]).value, @"ghi", @"Value not correct");
 
-	GHAssertTrue([[element nodeAtIndex:3] isKindOfClass:[TextNode class]], @"Incorrect class of node.");
-	GHAssertEqualStrings(((TextNode *) [element nodeAtIndex:3]).value, @"lmn", @"Value not correct");
+	GHAssertTrue([[element nodeAtIndex:3] isKindOfClass:[DCTextNode class]], @"Incorrect class of node.");
+	GHAssertEqualStrings(((DCTextNode *) [element nodeAtIndex:3]).value, @"lmn", @"Value not correct");
 
 }
 

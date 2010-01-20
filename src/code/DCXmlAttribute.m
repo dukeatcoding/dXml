@@ -6,15 +6,15 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "XmlAttribute.h"
+#import "DCXmlAttribute.h"
 #import "dXml.h"
 
-@implementation XmlAttribute
+@implementation DCXmlAttribute
 
 @synthesize name;
 @synthesize value;
 
--(XmlAttribute *) initWithName: (NSString *) aName value: (NSString *) aValue {
+-(DCXmlAttribute *) initWithName: (NSString *) aName value: (NSString *) aValue {
 	self = [super init];
 	if (self) {
 		name = [aName retain];

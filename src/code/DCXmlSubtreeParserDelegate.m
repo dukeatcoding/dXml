@@ -6,24 +6,24 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "XmlSubtreeParserDelegate.h"
+#import "DCXmlSubtreeParserDelegate.h"
 #import "dXml.h"
-#import "XmlNamespace.h"
+#import "DCXmlNamespace.h"
 
-@interface XmlSubtreeParserDelegate ()
+@interface DCXmlSubtreeParserDelegate ()
 
 -(void) appendCachedText;
 
 @end
 
 
-@implementation XmlSubtreeParserDelegate
+@implementation DCXmlSubtreeParserDelegate
 
 @synthesize rootNode;
 @synthesize error;
 
 - (void) createNodeWithName: (NSString *) aName {
-	XmlNode *newNode = [[XmlNode alloc] initWithName: aName];
+	DCXmlNode *newNode = [[DCXmlNode alloc] initWithName: aName];
 	[currentNode addNode: newNode];
 	[currentNode release];
 	currentNode = newNode;
@@ -86,7 +86,7 @@
 
 	//Make the parent the current element. This works with the top level because it will have a
 	//nil parent, but sending messages to nil is valid so the retain works.
-	XmlNode *parent = [currentNode parentNode];
+	DCXmlNode *parent = [currentNode parentNode];
 	[currentNode release];
 	currentNode = [parent retain];
 }

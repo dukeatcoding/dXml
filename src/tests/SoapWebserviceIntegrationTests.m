@@ -8,15 +8,15 @@
 #import <Foundation/Foundation.h>
 #import "dXml.h"
 #import "GHUnit.h"
-#import "SoapWebServiceConnection.h"
+#import "DCSoapWebServiceConnection.h"
 #import "XmlDocument.h"
 #import "IntegrationTestDefaults.h"
 
 @interface SoapWebserviceIntegrationTests:GHTestCase
 {
 }
-- (XmlNode *) createBalancePayload;
-- (void) assertBalanceResponse: (WebServiceResponse *) response;
+- (DCXmlNode *) createBalancePayload;
+- (void) assertBalanceResponse: (DCWebServiceResponse *) response;
 @end
 
 @implementation SoapWebserviceIntegrationTests
@@ -26,30 +26,30 @@
 						 @"<forAccountNumber>1234</forAccountNumber>"
 						 @"</dhc:balance>";
 
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
 
 	NSError *error = nil;
-	WebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
 	GHAssertNil(error, @"An error should not have been returned");
 	[self assertBalanceResponse: response];
 }
 
 - (void) testMsgUsingXmlNodes {
-	XmlNode *accountBalance = [self createBalancePayload];
+	DCXmlNode *accountBalance = [self createBalancePayload];
 
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
 	NSError *error = nil;
-	WebServiceResponse *response = [service postXmlNodePayload: accountBalance errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlNodePayload: accountBalance errorVar:&error];
 	GHAssertNil(error, @"An error should not have been returned");
 	[self assertBalanceResponse: response];
 }
 
 - (void) testSecureMsgUsingXmlNodes {
-	XmlNode *accountBalance = [self createBalancePayload];
+	DCXmlNode *accountBalance = [self createBalancePayload];
 
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
 	NSError *error = nil;
-	WebServiceResponse *response = [service postXmlNodePayload: accountBalance errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlNodePayload: accountBalance errorVar:&error];
 	GHAssertNil(error, @"An error should not have been returned");
 	[self assertBalanceResponse: response];
 }
@@ -58,9 +58,9 @@
 	//THis is an old format payload which no longer works. Now generates a soap fault.
 	NSString *xml = @"<dhc:AccountBalance xmlns:dhc=\"" BASE_SCHEMA "\" />";
 
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
 	NSError *error = nil;
-	WebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
 
 	GHAssertNotNil(error, @"Nil error returned");
 	GHAssertNil(response, @"Response returned when it should not be.");
@@ -74,9 +74,9 @@
 - (void) testSoapWithFaultCustomException {
 	NSString *xml = @"<dhc:balance xmlns:dhc=\"" MODEL_SCHEMA "\" />";
 
-	SoapWebServiceConnection *service = [SoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
+	DCSoapWebServiceConnection *service = [DCSoapWebServiceConnection createWithUrl: BANKING soapAction: BALANCE_ACTION];
 	NSError *error = nil;
-	WebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
+	DCWebServiceResponse *response = [service postXmlStringPayload: xml errorVar:&error];
 
 	GHAssertNotNil(error, @"Nil error returned");
 	GHAssertNil(response, @"Response returned when it should not be.");
@@ -87,14 +87,14 @@
 	GHAssertEqualStrings([userInfo valueForKey:@"faultMessage"], @"No account number passed to service.", @"Incorrect fault message returned");
 }
 
-- (void) assertBalanceResponse: (WebServiceResponse *) response {
+- (void) assertBalanceResponse: (DCWebServiceResponse *) response {
 	GHAssertEqualStrings([response bodyContent].name, @"balanceResponse", @"Body content incorrect");
 	GHAssertNotNil([[response bodyContent] xmlNodeWithName: @"balance"], @"Response not correct.");
 	GHAssertNotNil([[response bodyContent] xmlNodeWithName: @"balance"].value, @"No balance amount");
 }
 
-- (XmlNode *) createBalancePayload {
-	XmlNode *accountBalance = [[[XmlNode alloc] initWithName: @"balance" prefix: @"dhc"] autorelease];
+- (DCXmlNode *) createBalancePayload {
+	DCXmlNode *accountBalance = [[[DCXmlNode alloc] initWithName: @"balance" prefix: @"dhc"] autorelease];
 	[accountBalance addNamespace: MODEL_SCHEMA prefix: @"dhc"];
 	[accountBalance addXmlNodeWithName: @"forAccountNumber" prefix: nil value: @"1234"];
 	return accountBalance;

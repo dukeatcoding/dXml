@@ -6,7 +6,7 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 #import "GHUnit.h"
-#import "UrlConnection.h"
+#import "DCUrlConnection.h"
 #import <OCMock/OCMock.h>
 #import "dXml.h"
 
@@ -19,12 +19,12 @@
 @implementation UrlConnection_NSURLConnectionDelegateTests
 
 - (void) testRejectsSelfSignedCertificates {
-	UrlConnection *conn = [UrlConnection createWithUrl: @"abc"];
+	DCUrlConnection *conn = [DCUrlConnection createWithUrl: @"abc"];
 	GHAssertFalse([conn connection: nil canAuthenticateAgainstProtectionSpace: nil], @"Expected can authenticate to be false");
 }
 
 - (void) testApprovesSelfSignedCertificates {
-	UrlConnection *conn = [UrlConnection createWithUrl: @"abc"];
+	DCUrlConnection *conn = [DCUrlConnection createWithUrl: @"abc"];
 	conn.allowSelfSignedCertificates = YES;
 	GHAssertTrue([conn connection: nil canAuthenticateAgainstProtectionSpace: nil], @"Expected can authenticate to be true");
 }
@@ -38,7 +38,7 @@
 	[[[mockChallenge stub] andReturn: mockSender] sender];
 	[[mockSender expect] useCredential:[OCMArg any] forAuthenticationChallenge: mockChallenge];
 
-	UrlConnection *conn = [UrlConnection createWithUrl: @"abc"];
+	DCUrlConnection *conn = [DCUrlConnection createWithUrl: @"abc"];
 	[conn setUsername: @"user" password: @"password"];
 	[conn connection: mockSender didReceiveAuthenticationChallenge: mockChallenge];
 
@@ -55,7 +55,7 @@
 	[[[mockChallenge stub] andReturn: mockSender] sender];
 	[[mockSender expect] cancelAuthenticationChallenge: mockChallenge];
 
-	UrlConnection *conn = [UrlConnection createWithUrl: @"abc"];
+	DCUrlConnection *conn = [DCUrlConnection createWithUrl: @"abc"];
 	[conn setUsername: @"user" password: @"password"];
 	[conn connection: mockSender didReceiveAuthenticationChallenge: mockChallenge];
 

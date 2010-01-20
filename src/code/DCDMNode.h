@@ -6,24 +6,23 @@
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
  
-// Use class to reference instead of import because import will create a circular reference and we want to
-// delay type checking to avoid it.
-@class XmlNode;
+// Use class to reference instead of import because import will create a circular reference and we want to delay type checking to avoid it.
+@class DCXmlNode;
 
 /**
- * The abstract parent of all DM node classes. This class should never be used directly because it merely provides some common code for the implementation classes. Instead make use of XmlNode and TextNode.
+ * The abstract parent of all DM node classes. This class should never be used directly because it merely provides some common code for the implementation classes. Instead make use of DCXmlNode and DCTextNode.
  */
-@interface DMNode : NSObject
+@interface DCDMNode : NSObject
 {
-    XmlNode * parentNode;
+    DCXmlNode * parentNode;
 }
 
 /** \name Properties */
 
-/** Used to locate the parent XmlNode in the DM tree.
+/** Used to locate the parent DCXmlNode in the DM tree.
  * Note that this is a weak reference (not retained). This avoids memory leaks caused
  * by circular references between parent and child nodes in the tree. */
-@property (nonatomic, assign) XmlNode * parentNode;
+@property (nonatomic, assign) DCXmlNode * parentNode;
 
 /**
  * Internal method used during pretty printing for adding tabs and new lines.

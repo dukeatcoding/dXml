@@ -1,17 +1,17 @@
 //
-//  TextNode.h
+//  DCTextNode.h
 //  dXml
 //
 //  Created by Derek Clarkson on 13/12/09.
 //  Copyright 2009 Derek Clarkson. All rights reserved.
 //
 
-#import "DMNode.h"
+#import "DCDMNode.h"
 
 /**
- * Simple node which represents a string of text inside a XmlNode. The only things this class contains is the text string.
+ * Simple node which represents a string of text inside a DCXmlNode. The only things this class contains is the text string.
  */
-@interface TextNode : DMNode {
+@interface DCTextNode : DCDMNode {
 	@private
 	NSString * value;
 }
@@ -20,7 +20,7 @@
 /**
  * Default constructor. 
  */
--(TextNode *) initWithText:(NSString *) text;
+-(DCTextNode *) initWithText:(NSString *) text;
 
 /** \name Properties */
 /** 

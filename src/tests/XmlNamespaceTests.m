@@ -7,7 +7,7 @@
 //
 
 #import "GHUnit.h"
-#import "XmlNamespace.h"
+#import "DCXmlNamespace.h"
 
 @interface XmlNamespaceTests : GHTestCase
 {
@@ -19,13 +19,13 @@
 @implementation XmlNamespaceTests
 
 -(void) testConstructor {
-	XmlNamespace * namespace = [[[XmlNamespace alloc] initWithUrl:@"url" prefix:@"prefix"] autorelease];
+	DCXmlNamespace * namespace = [[[DCXmlNamespace alloc] initWithUrl:@"url" prefix:@"prefix"] autorelease];
 	GHAssertEqualStrings(namespace.url, @"url", @"Url not returned");
 	GHAssertEqualStrings(namespace.prefix, @"prefix", @"prefix not returned");
 }
 
 -(void) testAppendToString {
-	XmlNamespace * namespace = [[[XmlNamespace alloc] initWithUrl:@"url" prefix:@"prefix"] autorelease];
+	DCXmlNamespace * namespace = [[[DCXmlNamespace alloc] initWithUrl:@"url" prefix:@"prefix"] autorelease];
 	NSMutableString * xml = [[[NSMutableString alloc] init] autorelease];
 	[namespace appendToXmlString:xml];
 	GHAssertEqualStrings(xml, @" xmlns:prefix=\"url\"", @"Namespace not appended corectly");
