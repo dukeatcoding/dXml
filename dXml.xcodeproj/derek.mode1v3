@@ -261,6 +261,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -304,7 +306,6 @@
 								<string>654EE4FA10FB66F00023F57D</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>65CA5B721105669F00BAB73A</string>
-								<string>65CA5E3F1106B7CB00BAB73A</string>
 								<string>65CA5B751105669F00BAB73A</string>
 								<string>65CA5B761105669F00BAB73A</string>
 								<string>65CA5E401106B7CB00BAB73A</string>
@@ -312,8 +313,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
-									<integer>0</integer>
+									<integer>18</integer>
+									<integer>17</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -351,8 +352,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -370,7 +369,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>65CA5E4E1106B9F800BAB73A</string>
+										<string>65CA5E6B1106BFDD00BAB73A</string>
 										<key>history</key>
 										<array>
 											<string>65AFA7291095482400355353</string>
@@ -470,7 +469,7 @@
 											<string>65CA5E421106B7CB00BAB73A</string>
 											<string>65CA5E431106B7CB00BAB73A</string>
 											<string>65CA5E4D1106B9F800BAB73A</string>
-											<string>65CA5D351106821400BAB73A</string>
+											<string>65CA5E581106BC0100BAB73A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -673,7 +672,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>65CA5E361106B72800BAB73A</string>
+	<string>65CA5E571106BBF500BAB73A</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -681,7 +680,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>285653496.97693402</real>
+	<real>285655005.22948498</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -698,14 +697,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>65CA5E191106B4B100BAB73A</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>65F4612E109416E2008AF68E</string>
 		<string>65CA5BF611058B1C00BAB73A</string>
 		<string>65CA5BED11058AE200BAB73A</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>65F460D9109410B9008AF68E</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>65F460D9109410B9008AF68E</string>
 		<string>/Users/derek/projects/dXml/dXml.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -925,7 +923,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

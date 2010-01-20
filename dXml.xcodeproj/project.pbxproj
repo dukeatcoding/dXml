@@ -565,7 +565,7 @@
 /* Begin PBXLegacyTarget section */
 		656847BE10D7000B0031C348 /* Documentation */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = " -p dXml -i src/code/ -o $CONFIGURATION/v$CURRENT_PROJECT_VERSION/docs -t /Users/derek/tools/appledoc/Templates -d /Users/derek/tools/Doxygen.app/Contents/Resources/doxygen -c doxygen-appledoc.config --xhtml-bordered-issues --docset --docplist docset.plist";
+			buildArgumentsString = " -p dXml -i src/code/ -o $CONFIGURATION/v$CURRENT_PROJECT_VERSION/docs -t /Users/derek/tools/appledoc/Templates -d /Users/derek/tools/Doxygen.app/Contents/Resources/doxygen -c doxygen-appledoc.config --xhtml-bordered-issues --docset --docplist docset.plist --clean-before-build";
 			buildConfigurationList = 656847C110D700290031C348 /* Build configuration list for PBXLegacyTarget "Documentation" */;
 			buildPhases = (
 			);
@@ -621,7 +621,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "dXml" */;
 			buildPhases = (
-				65CA5E241106B6BE00BAB73A /* ShellScript */,
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
@@ -671,19 +670,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\n\necho Building dmg of project ...\n\nFILE_DIR=\"$PROJECT_DIR/$CONFIGURATION/v$CURRENT_PROJECT_VERSION\"\nFINAL_DMG=\"$PROJECT_DIR/$CONFIGURATION/$PROJECT-$CURRENT_PROJECT_VERSION.dmg\"\n\nhdiutil create \"$FINAL_DMG\" -ov -srcdir $FILE_DIR -volname \"$PROJECT_NAME v$CURRENT_PROJECT_VERSION\" -attach\n\necho done.";
-		};
-		65CA5E241106B6BE00BAB73A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo Clearing docs from build dir ...\nrm -fr $BUILD_DIR/docs\necho done.";
 		};
 /* End PBXShellScriptBuildPhase section */
 
